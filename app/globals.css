@@ -53,3 +53,34 @@ body {
 .text-gray-700 {
   color: #d1d5db !important;
 }
+
+/* YouTube Video Background Styles */
+.video-background-iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 56.25vw; /* 16:9 aspect ratio */
+  min-height: 100vh;
+  min-width: 177.78vh; /* 16:9 aspect ratio */
+  transform: translate(-50%, -50%);
+  border: none;
+}
+
+/* Mobile optimizations for video background */
+@media (max-width: 768px) {
+  .video-background-iframe {
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+}
+
+/* Ensure video doesn't interfere with mobile display patterns */
+@media (max-width: 640px) {
+  .video-background-iframe {
+    object-fit: cover;
+    object-position: center;
+  }
+}

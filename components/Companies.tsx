@@ -46,63 +46,63 @@ export default function Companies() {
   ]
 
   return (
-    <section id="companies" className="py-20">
+    <section id="companies" className="py-12 sm:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-20">
-          <div className="inline-block bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium text-white uppercase tracking-wider">Our Companies</span>
+        <div className="text-center mb-12 sm:mb-20">
+          <div className="inline-block bg-white/10 backdrop-blur-sm rounded-full px-4 sm:px-6 py-2 mb-4 sm:mb-6">
+            <span className="text-xs sm:text-sm font-medium text-white uppercase tracking-wider">Our Companies</span>
           </div>
-          <h2 className="text-5xl font-bold text-white mb-6 uppercase tracking-wide">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 uppercase tracking-wide">
             ONIX Group of Companies
           </h2>
-          <div className="w-24 h-1 bg-white mx-auto mb-8"></div>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+          <div className="w-16 sm:w-24 h-1 bg-white mx-auto mb-6 sm:mb-8"></div>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto">
             A diverse portfolio of specialized companies delivering excellence across multiple industries 
             with innovative solutions and professional expertise.
           </p>
         </div>
 
         {/* Companies Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {companies.map((company, index) => (
-            <div key={index} className="bg-gray-900/80 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-white/10 hover:shadow-3xl transition-all duration-300 hover:scale-105 group">
+            <div key={index} className="bg-gray-900/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 lg:p-8 shadow-2xl border border-white/10 hover:shadow-3xl transition-all duration-300 hover:scale-105 group">
               {/* Company Header */}
-              <div className="text-center mb-6">
+              <div className="text-center mb-4 sm:mb-6">
                 {company.customLogo ? (
-                  <div className="w-20 h-20 bg-black rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300 border border-gray-700">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-black rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300 border border-gray-700">
                     {/* Custom ONIX Engineering Consultancy Logo */}
-                    <div className="relative w-16 h-16">
+                    <div className="relative w-12 h-12 sm:w-16 sm:h-16">
                       {/* Top-left cyan crescent */}
-                      <div className="absolute w-8 h-8 border-3 border-cyan-400 rounded-full border-r-0 border-b-0 transform rotate-45 top-0 left-0"></div>
+                      <div className="absolute w-6 h-6 sm:w-8 sm:h-8 border-2 sm:border-3 border-cyan-400 rounded-full border-r-0 border-b-0 transform rotate-45 top-0 left-0"></div>
                       {/* Bottom-left orange crescent */}
-                      <div className="absolute w-6 h-6 border-2 border-orange-400 rounded-full border-r-0 border-b-0 transform rotate-45 bottom-0 left-0"></div>
+                      <div className="absolute w-4 h-4 sm:w-6 sm:h-6 border-2 border-orange-400 rounded-full border-r-0 border-b-0 transform rotate-45 bottom-0 left-0"></div>
                       {/* Right gray crescent */}
-                      <div className="absolute w-7 h-7 border-2 border-gray-300 rounded-full border-r-0 border-b-0 transform rotate-45 top-1 right-0"></div>
+                      <div className="absolute w-5 h-5 sm:w-7 sm:h-7 border-2 border-gray-300 rounded-full border-r-0 border-b-0 transform rotate-45 top-0.5 sm:top-1 right-0"></div>
                     </div>
                   </div>
                 ) : (
-                  <div className={`w-16 h-16 bg-gradient-to-br ${company.color} rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                    <span className="text-2xl">{company.icon}</span>
+                  <div className={`w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br ${company.color} rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                    <span className="text-xl sm:text-2xl">{company.icon}</span>
                   </div>
                 )}
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-white/90 transition-colors duration-300">
+                <h3 className="text-base sm:text-lg lg:text-xl font-bold text-white mb-2 group-hover:text-white/90 transition-colors duration-300">
                   {company.name}
                 </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
+                <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
                   {company.description}
                 </p>
               </div>
 
               {/* Services List */}
-              <div className="space-y-3">
-                <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-3">
+              <div className="space-y-2 sm:space-y-3">
+                <h4 className="text-xs sm:text-sm font-semibold text-white uppercase tracking-wide mb-2 sm:mb-3">
                   Services
                 </h4>
-                <div className="grid grid-cols-1 gap-2">
+                <div className="grid grid-cols-1 gap-1 sm:gap-2">
                   {company.services.map((service, serviceIndex) => (
-                    <div key={serviceIndex} className="flex items-center text-sm text-gray-300 hover:text-white transition-colors duration-200">
-                      <div className="w-2 h-2 bg-white rounded-full mr-3 flex-shrink-0"></div>
+                    <div key={serviceIndex} className="flex items-center text-xs sm:text-sm text-gray-300 hover:text-white transition-colors duration-200">
+                      <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full mr-2 sm:mr-3 flex-shrink-0"></div>
                       <span>{service}</span>
                     </div>
                   ))}
@@ -110,9 +110,9 @@ export default function Companies() {
               </div>
 
               {/* Company Badge */}
-              <div className="mt-6 pt-4 border-t border-white/20">
+              <div className="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t border-white/20">
                 <div className="text-center">
-                  <span className="inline-block bg-white/10 text-white text-xs font-medium px-3 py-1 rounded-full">
+                  <span className="inline-block bg-white/10 text-white text-xs font-medium px-2 sm:px-3 py-1 rounded-full">
                     ONIX GROUP
                   </span>
                 </div>
@@ -122,17 +122,17 @@ export default function Companies() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-            <h3 className="text-2xl font-bold text-white mb-4">
+        <div className="text-center mt-12 sm:mt-16">
+          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/10">
+            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4">
               Ready to Work With Our Companies?
             </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-6 max-w-2xl mx-auto">
               Contact us to discuss how our diverse portfolio of companies can meet your specific project requirements.
             </p>
             <a 
               href="#contact" 
-              className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg"
+              className="inline-block bg-white text-gray-900 px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg text-sm sm:text-base"
             >
               Get In Touch
             </a>

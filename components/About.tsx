@@ -27,14 +27,14 @@ export default function About() {
     }
   }, [])
 
-  const AnimatedNumber = ({ end, suffix = '', duration = 2000 }) => {
+  const AnimatedNumber = ({ end, suffix = '', duration = 2000 }: { end: number; suffix?: string; duration?: number }) => {
     const [count, setCount] = useState(0)
 
     useEffect(() => {
       if (!isVisible) return
 
-      let startTime
-      const animate = (currentTime) => {
+      let startTime: number | undefined
+      const animate = (currentTime: number) => {
         if (!startTime) startTime = currentTime
         const progress = Math.min((currentTime - startTime) / duration, 1)
         

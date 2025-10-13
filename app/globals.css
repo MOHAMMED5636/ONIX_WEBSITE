@@ -20,6 +20,12 @@ body {
   min-height: 100vh;
 }
 
+/* Ensure footer is visible */
+footer {
+  position: relative;
+  z-index: 10;
+}
+
 /* Ensure no default margins on all elements */
 * {
   margin: 0;
@@ -37,50 +43,64 @@ body {
   overflow: hidden;
 }
 
+/* Image transition effects */
+.image-transition {
+  transition: opacity 1s ease-in-out;
+}
+
+/* Image indicators */
+.image-indicator {
+  transition: all 0.3s ease;
+}
+
+.image-indicator:hover {
+  transform: scale(1.2);
+}
+
 .text-shadow {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Dark theme overrides */
-.bg-white {
+/* Fixed header styling */
+header {
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Service icons section */
+.service-icons {
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+}
+
+/* White section styling for Al Shirawi style */
+.white-section {
+  background-color: #ffffff;
+  color: #1f2937;
+}
+
+.white-section h2 {
+  color: #1f2937;
+}
+
+.white-section input {
+  background-color: #ffffff;
+  border-color: #d1d5db;
+  color: #1f2937;
+}
+
+.white-section input::placeholder {
+  color: #6b7280;
+}
+
+/* Dark theme overrides - only apply to dark sections */
+.dark-section .bg-white {
   background-color: #1f2937 !important;
 }
 
-.text-gray-900 {
+.dark-section .text-gray-900 {
   color: #ffffff !important;
 }
 
-.text-gray-700 {
+.dark-section .text-gray-700 {
   color: #d1d5db !important;
-}
-
-/* YouTube Video Background Styles */
-.video-background-iframe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100vw;
-  height: 56.25vw; /* 16:9 aspect ratio */
-  min-height: 100vh;
-  min-width: 177.78vh; /* 16:9 aspect ratio */
-  transform: translate(-50%, -50%);
-  border: none;
-}
-
-/* Mobile optimizations for video background */
-@media (max-width: 768px) {
-  .video-background-iframe {
-    width: 100vw;
-    height: 100vh;
-    min-height: 100vh;
-    min-width: 100vw;
-  }
-}
-
-/* Ensure video doesn't interfere with mobile display patterns */
-@media (max-width: 640px) {
-  .video-background-iframe {
-    object-fit: cover;
-    object-position: center;
-  }
 }

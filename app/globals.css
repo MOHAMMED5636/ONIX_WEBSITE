@@ -41,6 +41,9 @@ footer {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Image transition effects */
@@ -61,10 +64,12 @@ footer {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Fixed header styling */
+/* Fixed header styling with glassy effect like Al Shirawi */
 header {
-  backdrop-filter: blur(10px);
-  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 /* Service icons section */

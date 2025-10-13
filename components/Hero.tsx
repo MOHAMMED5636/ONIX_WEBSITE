@@ -46,136 +46,210 @@ export default function Hero() {
 
   return (
     <>
-      {/* Header - Fixed at top like Al Shirawi */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
-        <div className="max-w-7xl mx-auto pl-2 sm:pl-4 lg:pl-6 pr-4 sm:pr-6 lg:pr-8">
-          <div className="flex items-center justify-between h-16">
-            {/* Logo - Left side like Al Shirawi */}
-            <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                <div className="w-5 h-5 border-2 border-gray-800 rounded-full"></div>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-lg font-bold text-white">ONIX</span>
-                <span className="text-xs text-gray-300 -mt-1">GROUP OF COMPANIES</span>
+      {/* Hero Section */}
+      <section className="hero-fullscreen relative">
+        {/* ONIX Logo - Top left */}
+        <div className="absolute top-4 left-4 sm:top-8 sm:left-8 z-10">
+          <div className="flex items-center space-x-2 sm:space-x-3">
+            <div className="w-8 h-8 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+              <div className="relative w-5 h-5 sm:w-8 sm:h-8">
+                {/* Outer crescent */}
+                <div className="absolute w-full h-full border-2 border-gray-800 rounded-full border-r-0 border-b-0 transform rotate-45"></div>
+                {/* Middle crescent */}
+                <div className="absolute w-4 h-4 sm:w-6 sm:h-6 border border-gray-800 rounded-full border-r-0 border-b-0 transform rotate-45 top-0.5 left-0.5 sm:top-1 sm:left-1"></div>
+                {/* Inner crescent */}
+                <div className="absolute w-2 h-2 sm:w-3 sm:h-3 border border-gray-800 rounded-full border-r-0 border-b-0 transform rotate-45 top-1.5 left-1.5 sm:top-2.5 sm:left-2.5"></div>
               </div>
             </div>
-
-            {/* Navigation - Right side like Al Shirawi */}
-            <div className="dropdown-container">
-              {/* Mobile Menu Button */}
-              <div className="md:hidden">
-                <button 
-                  onClick={() => setShowMobileMenu(!showMobileMenu)}
-                  className="text-white hover:text-gray-300 transition-colors duration-200"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                  </svg>
-                </button>
-              </div>
-              
-              {/* Mobile Menu */}
-              {showMobileMenu && (
-                <div className="md:hidden absolute top-full right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                  <div className="px-4 py-2">
-                    <button 
-                      onClick={() => setShowAboutDropdown(!showAboutDropdown)}
-                      className="flex items-center justify-between w-full text-left text-sm text-gray-700 hover:bg-gray-100 transition-colors duration-200"
-                    >
-                      ABOUT
-                      <svg className={`w-4 h-4 transition-transform duration-200 ${showAboutDropdown ? 'rotate-180' : ''}`} fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                      </svg>
-                    </button>
-                    {showAboutDropdown && (
-                      <div className="ml-4 mt-2 space-y-1">
-                        <a href="#about" className="block text-xs text-gray-600 hover:text-gray-800" onClick={() => setShowMobileMenu(false)}>Who We Are</a>
-                        <a href="#leadership" className="block text-xs text-gray-600 hover:text-gray-800" onClick={() => setShowMobileMenu(false)}>Leadership</a>
-                        <a href="#sustainability" className="block text-xs text-gray-600 hover:text-gray-800" onClick={() => setShowMobileMenu(false)}>Sustainability</a>
-                      </div>
-                    )}
-                  </div>
-                  <a href="#companies" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => setShowMobileMenu(false)}>COMPANIES</a>
-                  <a href="#projects" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => setShowMobileMenu(false)}>NEWS</a>
-                  <a href="#contact" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => setShowMobileMenu(false)}>CONNECT</a>
-                  <a href="#footer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => setShowMobileMenu(false)}>LEGACY</a>
-                </div>
-              )}
-              
-              {/* Desktop Navigation */}
-              <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
-                {/* About with Dropdown */}
-                <div 
-                  className="relative"
-                  onMouseEnter={() => setShowAboutDropdown(true)}
-                  onMouseLeave={() => setShowAboutDropdown(false)}
-                >
-                  <a 
-                    href="#about" 
-                    className="text-white hover:text-gray-300 font-medium transition-colors duration-200 text-sm uppercase tracking-wide cursor-pointer flex items-center"
-                  >
-                    ABOUT
-                    <svg className="ml-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                    </svg>
-                  </a>
-                  
-                  {/* Dropdown Menu */}
-                  {showAboutDropdown && (
-                    <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                      <a 
-                        href="#about" 
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors duration-200"
-                        onClick={() => setShowAboutDropdown(false)}
-                      >
-                        Who We Are
-                      </a>
-                      <a 
-                        href="#leadership" 
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors duration-200"
-                        onClick={() => setShowAboutDropdown(false)}
-                      >
-                        Leadership
-                      </a>
-                      <a 
-                        href="#sustainability" 
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors duration-200"
-                        onClick={() => setShowAboutDropdown(false)}
-                      >
-                        Sustainability
-                      </a>
-                    </div>
-                  )}
-                </div>
-                
-                <a href="#companies" className="text-white hover:text-gray-300 font-medium transition-colors duration-200 text-sm uppercase tracking-wide cursor-pointer">
-                  COMPANIES
-                </a>
-                <a href="#projects" className="text-white hover:text-gray-300 font-medium transition-colors duration-200 text-sm uppercase tracking-wide cursor-pointer">
-                  NEWS
-                </a>
-                <a href="#contact" className="text-white hover:text-gray-300 font-medium transition-colors duration-200 text-sm uppercase tracking-wide cursor-pointer">
-                  CONNECT
-                </a>
-                <a href="#footer" className="text-white hover:text-gray-300 font-medium transition-colors duration-200 text-sm uppercase tracking-wide cursor-pointer">
-                  LEGACY
-                </a>
-                
-                {/* Search Icon like Al Shirawi */}
-                <div className="w-6 h-6 text-white hover:text-gray-300 cursor-pointer">
-                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
-                </div>
-              </nav>
+            <div className="flex flex-col">
+              <span className="text-lg sm:text-2xl font-bold text-white">ONIX</span>
+              <span className="text-xs sm:text-sm text-gray-300 -mt-1">GROUP OF COMPANIES</span>
             </div>
           </div>
         </div>
-      </header>
 
-      {/* Hero Section */}
-      <section className="hero-fullscreen relative">
+        {/* Navigation Links - Top right */}
+        <div className="absolute top-4 right-4 sm:top-8 sm:right-8 z-50">
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
+            {/* About with Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setShowAboutDropdown(true)}
+              onMouseLeave={() => setShowAboutDropdown(false)}
+            >
+              <button 
+                className="text-white hover:text-blue-400 font-medium transition-all duration-300 text-sm uppercase tracking-wide cursor-pointer flex items-center relative group bg-transparent border-none"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                <span className="relative">
+                  ABOUT
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                </span>
+                <svg className="ml-1 w-3 h-3 transition-transform duration-200 group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </button>
+              
+              {/* Dropdown Menu */}
+              {showAboutDropdown && (
+                <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                  <button 
+                    className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors duration-200 bg-transparent border-none"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setShowAboutDropdown(false);
+                      document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                  >
+                    Who We Are
+                  </button>
+                  <button 
+                    className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors duration-200 bg-transparent border-none"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setShowAboutDropdown(false);
+                      document.getElementById('leadership')?.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                  >
+                    Leadership
+                  </button>
+                  <button 
+                    className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors duration-200 bg-transparent border-none"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setShowAboutDropdown(false);
+                      document.getElementById('sustainability')?.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                  >
+                    Sustainability
+                  </button>
+                </div>
+              )}
+            </div>
+            
+            <button 
+              className="text-white hover:text-blue-400 font-medium transition-all duration-300 text-sm uppercase tracking-wide cursor-pointer relative group bg-transparent border-none"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('companies')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              <span className="relative">
+                COMPANIES
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+              </span>
+            </button>
+            <button 
+              className="text-white hover:text-blue-400 font-medium transition-all duration-300 text-sm uppercase tracking-wide cursor-pointer relative group bg-transparent border-none"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              <span className="relative">
+                NEWS
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+              </span>
+            </button>
+            <button 
+              className="text-white hover:text-blue-400 font-medium transition-all duration-300 text-sm uppercase tracking-wide cursor-pointer relative group bg-transparent border-none"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              <span className="relative">
+                CONNECT
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+              </span>
+            </button>
+            <button 
+              className="text-white hover:text-blue-400 font-medium transition-all duration-300 text-sm uppercase tracking-wide cursor-pointer relative group bg-transparent border-none"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              <span className="relative">
+                LEGACY
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+              </span>
+            </button>
+            
+            {/* Search Icon */}
+            <div className="w-6 h-6 text-white hover:text-blue-400 cursor-pointer transition-colors duration-300 hover:scale-110">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+          </nav>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <button 
+              onClick={() => setShowMobileMenu(!showMobileMenu)}
+              className="text-white hover:text-gray-300 transition-colors duration-200"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+          
+          {/* Mobile Menu */}
+          {showMobileMenu && (
+            <div className="md:hidden absolute top-full right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+              <div className="px-4 py-2">
+                <button 
+                  onClick={() => setShowAboutDropdown(!showAboutDropdown)}
+                  className="flex items-center justify-between w-full text-left text-sm text-gray-700 hover:bg-gray-100 transition-colors duration-200 bg-transparent border-none"
+                >
+                  ABOUT
+                  <svg className={`w-4 h-4 transition-transform duration-200 ${showAboutDropdown ? 'rotate-180' : ''}`} fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </button>
+                {showAboutDropdown && (
+                  <div className="ml-4 mt-2 space-y-1">
+                    <button className="block w-full text-left text-xs text-gray-600 hover:text-gray-800 bg-transparent border-none" onClick={() => {
+                      setShowMobileMenu(false);
+                      document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+                    }}>Who We Are</button>
+                    <button className="block w-full text-left text-xs text-gray-600 hover:text-gray-800 bg-transparent border-none" onClick={() => {
+                      setShowMobileMenu(false);
+                      document.getElementById('leadership')?.scrollIntoView({ behavior: 'smooth' });
+                    }}>Leadership</button>
+                    <button className="block w-full text-left text-xs text-gray-600 hover:text-gray-800 bg-transparent border-none" onClick={() => {
+                      setShowMobileMenu(false);
+                      document.getElementById('sustainability')?.scrollIntoView({ behavior: 'smooth' });
+                    }}>Sustainability</button>
+                  </div>
+                )}
+              </div>
+              <button className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 bg-transparent border-none" onClick={() => {
+                setShowMobileMenu(false);
+                document.getElementById('companies')?.scrollIntoView({ behavior: 'smooth' });
+              }}>COMPANIES</button>
+              <button className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 bg-transparent border-none" onClick={() => {
+                setShowMobileMenu(false);
+                document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+              }}>NEWS</button>
+              <button className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 bg-transparent border-none" onClick={() => {
+                setShowMobileMenu(false);
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}>CONNECT</button>
+              <button className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 bg-transparent border-none" onClick={() => {
+                setShowMobileMenu(false);
+                document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' });
+              }}>LEGACY</button>
+            </div>
+          )}
+        </div>
+
         {/* Background */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           {/* Dynamic Background Images with smooth transitions */}
@@ -186,7 +260,13 @@ export default function Hero() {
                 index === currentImageIndex ? 'opacity-100' : 'opacity-0'
               }`}
               style={{
-                backgroundImage: `url('${image}')`
+                backgroundImage: `url('${image}')`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                width: '100%',
+                height: '100%',
+                minHeight: '100vh'
               }}
             />
           ))}

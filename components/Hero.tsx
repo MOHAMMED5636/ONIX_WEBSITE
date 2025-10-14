@@ -2,8 +2,10 @@
 
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 
 export default function Hero() {
+  const router = useRouter()
   const [showAboutDropdown, setShowAboutDropdown] = useState(false)
   const [showMobileMenu, setShowMobileMenu] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
@@ -51,16 +53,12 @@ export default function Hero() {
         {/* ONIX Logo - Top left */}
         <div className="absolute top-4 left-4 sm:top-8 sm:left-8 z-10">
           <div className="flex items-center space-x-2 sm:space-x-3">
-            <div className="w-8 h-8 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
-              <div className="relative w-5 h-5 sm:w-8 sm:h-8">
-                {/* Outer crescent */}
-                <div className="absolute w-full h-full border-2 border-gray-800 rounded-full border-r-0 border-b-0 transform rotate-45"></div>
-                {/* Middle crescent */}
-                <div className="absolute w-4 h-4 sm:w-6 sm:h-6 border border-gray-800 rounded-full border-r-0 border-b-0 transform rotate-45 top-0.5 left-0.5 sm:top-1 sm:left-1"></div>
-                {/* Inner crescent */}
-                <div className="absolute w-2 h-2 sm:w-3 sm:h-3 border border-gray-800 rounded-full border-r-0 border-b-0 transform rotate-45 top-1.5 left-1.5 sm:top-2.5 sm:left-2.5"></div>
-              </div>
-            </div>
+            <img 
+              src="/images/ONIX_LOGO.png?v=2" 
+              alt="ONIX Logo" 
+              className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
+              key="onix-logo-colorful"
+            />
             <div className="flex flex-col">
               <span className="text-lg sm:text-2xl font-bold text-white">ONIX</span>
               <span className="text-xs sm:text-sm text-gray-300 -mt-1">GROUP OF COMPANIES</span>
@@ -171,7 +169,7 @@ export default function Hero() {
               className="text-white hover:text-blue-400 font-medium transition-all duration-300 text-sm uppercase tracking-wide cursor-pointer relative group bg-transparent border-none"
               onClick={(e) => {
                 e.preventDefault();
-                document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' });
+                router.push('/legacy');
               }}
             >
               <span className="relative">
@@ -244,7 +242,7 @@ export default function Hero() {
               }}>CONNECT</button>
               <button className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 bg-transparent border-none" onClick={() => {
                 setShowMobileMenu(false);
-                document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' });
+                router.push('/legacy');
               }}>LEGACY</button>
             </div>
           )}

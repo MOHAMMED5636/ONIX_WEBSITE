@@ -17,46 +17,39 @@ export default function Timeline() {
 
   const timelineEvents = [
     {
-      year: '1995',
-      title: 'Foundation',
-      description: 'Onix Group was founded with a vision to revolutionize the engineering and construction industry through innovation and excellence.',
-      image: '/images/ONIX_LOGO.png'
+      number: '02',
+      title: 'Taking the first steps towards constructing a solid foundation',
+      description: 'This was the year the UAE was founded, claiming an identity for itself, with a major thrust into construction as everything had to be built from the ground up - villas, hotels and buildings as well. The newly-formed Onix Group made its foray in the world of trading. However, soon, sensing the growing potential of construction, the Founders of the Onix Group moved the business to trading related to construction, building materials, and steel to name a few.',
+      image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      year: '1995'
     },
     {
-      year: '2000',
-      title: 'First Major Project',
-      description: 'Successfully completed our first major infrastructure project, establishing our reputation for quality and reliability.',
-      image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+      number: '03',
+      title: 'Contributing to a growing nation, through the power of engineering',
+      description: 'Around the same time, there was another story in the making - the story of two young men with big dreams. The founders of Onix Group, who had a vision to revolutionize the engineering and construction industry, wanted to build something extraordinary together.',
+      image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      year: '2000'
     },
     {
-      year: '2005',
-      title: 'Regional Expansion',
-      description: 'Expanded operations across the region, bringing our expertise to new markets and communities.',
-      image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+      number: '04',
+      title: 'Shaping the destiny of the UAE, one project at a time',
+      description: 'Around the mid-2000s - 2005 to be precise - construction and infrastructure development sprang up bountifully in the Middle East. With a finger firmly placed on the pulse of the nation, the Group made its foray into the Oil and Gas industry, anticipating the need for the supply of transportation and process equipment.',
+      image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      year: '2005'
     },
     {
-      year: '2010',
-      title: 'Technology Integration',
-      description: 'Integrated cutting-edge technology into our operations, setting new standards for efficiency and precision.',
-      image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+      number: '05',
+      title: 'Expanding to greater horizons with the rise of technology',
+      description: 'Expansion was one of the main keywords in the late 2000s in the UAE, both for the Group and the nation in its combined growth story, it stood to reason that a stronghold should be created in the technology industry. And so it was that Onix International Engineering was formed, serving as a solutions-provider for the repair, remanufacturing and manufacturing of industrial equipment.',
+      image: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      year: '2010'
     },
     {
-      year: '2015',
-      title: 'Sustainability Focus',
-      description: 'Launched our sustainability initiative, committing to environmentally responsible practices in all our projects.',
-      image: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
-    },
-    {
-      year: '2020',
-      title: 'Digital Transformation',
-      description: 'Embraced digital transformation, implementing advanced project management and collaboration tools.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
-    },
-    {
-      year: '2024',
-      title: 'Future Vision',
-      description: 'Continuing to lead the industry with innovative solutions and expanding our global footprint.',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+      number: '06',
+      title: 'Expansion in the UAE of the 2010s',
+      description: 'The group joined the nation in its growth story, stepping boldly into repair, remanufacturing and manufacturing.',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      year: '2015'
     }
   ]
 
@@ -116,46 +109,139 @@ export default function Timeline() {
       {/* Main Headline */}
       <div className="text-center py-6 px-4">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-2 tracking-wide">
-          OUR STORY TIMELINE
+          OUR STORY
         </h2>
         <p className="text-lg text-gray-300">
-          Journey through the milestones that shaped our legacy
+          Growing up with a Glorious Nation
         </p>
       </div>
 
-      {/* Timeline Section */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="relative">
-          {/* Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-blue-400 to-blue-600 h-full"></div>
-          
-          {/* Timeline Events */}
-          <div className="space-y-8">
-            {timelineEvents.map((event, index) => (
-              <div key={index} className={`relative flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                {/* Timeline Dot */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-blue-500 rounded-full border-4 border-white shadow-lg z-10"></div>
+      {/* Introductory Story Section - Above Timeline */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="relative min-h-screen flex items-center">
+          <div className="relative z-10 w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+              {/* Left Side - Text Content */}
+              <div className="space-y-6">
+                {/* Main Title */}
+                <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                  Growing up with a Glorious Nation
+                </h3>
                 
-                {/* Event Content */}
-                <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
-                    <div className="flex items-center mb-4">
+                {/* Description */}
+                <div className="space-y-6">
+                  <p className="text-lg text-gray-300 leading-relaxed">
+                    This story dates back to the 1990s, to that moment in time destined to forevermore be marked in the history of the world. 
+                    Engineering and construction had first been discovered as the backbone of development in the UAE in 1995.
+                  </p>
+                  
+                  <p className="text-lg text-gray-300 leading-relaxed">
+                    Around the same time, there was another story in the making - the story of two young men with big dreams. 
+                    The founders of Onix Group, who had a vision to revolutionize the engineering and construction industry, 
+                    wanted to build something extraordinary together.
+                  </p>
+                  
+                  <p className="text-lg text-gray-300 leading-relaxed">
+                    And so the Onix Group came into being, built on the aspirations of visionary leaders and an unwavering 
+                    commitment to excellence in engineering and construction services.
+                  </p>
+                </div>
+              </div>
+              
+              {/* Right Side - Blue and Red Logo */}
+              <div className="relative">
+                <div className="w-full h-96 lg:h-[500px] rounded-full overflow-hidden border-4 border-white/20 shadow-2xl bg-gradient-to-br from-blue-600 via-blue-800 to-red-600 flex items-center justify-center">
+                  {/* Blue and Red Logo Design */}
+                  <div className="relative">
+                    {/* Blue Circle */}
+                    <div className="w-32 h-32 lg:w-48 lg:h-48 bg-blue-500 rounded-full flex items-center justify-center shadow-2xl">
+                      {/* Red Circle Inside */}
+                      <div className="w-20 h-20 lg:w-32 lg:h-32 bg-red-500 rounded-full flex items-center justify-center">
+                        {/* White ONIX Text */}
+                        <div className="text-white font-bold text-2xl lg:text-4xl">
+                          O
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Blue Ring Around */}
+                    <div className="absolute inset-0 w-32 h-32 lg:w-48 lg:h-48 border-4 border-blue-300 rounded-full animate-pulse"></div>
+                  </div>
+                </div>
+                
+                {/* Decorative Elements */}
+                <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-500 rounded-full opacity-60"></div>
+                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-red-500 rounded-full opacity-60"></div>
+                <div className="absolute top-1/2 -left-8 w-4 h-4 bg-blue-400 rounded-full opacity-60"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Timeline Header */}
+      <div className="text-center py-8 px-4">
+        <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+          Take a walk down history to see what transpired over the years
+        </h3>
+        <p className="text-lg text-gray-300">
+          Into making the Group what it is today
+        </p>
+      </div>
+
+      {/* Timeline Section - Al Shirawi Style */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="space-y-16">
+          {timelineEvents.map((event, index) => (
+            <div key={index} className="relative min-h-screen flex items-center">
+              {/* Large Number Background */}
+              <div className="absolute top-0 right-0 text-9xl md:text-[12rem] font-bold text-white/10 z-0">
+                {event.number}
+              </div>
+              
+              <div className="relative z-10 w-full">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+                  {/* Left Side - Text Content */}
+                  <div className="space-y-6">
+                    {/* Oval Text Box */}
+                    <div className="bg-white/5 backdrop-blur-sm rounded-full px-8 py-4 border border-white/20">
+                      <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight">
+                        {event.title}
+                      </h3>
+                    </div>
+                    
+                    {/* Description */}
+                    <div className="space-y-4">
+                      <p className="text-lg text-gray-300 leading-relaxed">
+                        {event.description}
+                      </p>
+                      
+                      {/* Year Badge */}
+                      <div className="inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        {event.year}
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Right Side - Image */}
+                  <div className="relative">
+                    <div className="w-full h-96 lg:h-[500px] rounded-full overflow-hidden border-4 border-white/20 shadow-2xl">
                       <img 
                         src={event.image} 
                         alt={event.title}
-                        className="w-16 h-16 rounded-full object-cover mr-4"
+                        className="w-full h-full object-cover"
                       />
-                      <div>
-                        <div className="text-2xl font-bold text-blue-400 mb-1">{event.year}</div>
-                        <h3 className="text-xl font-bold text-white">{event.title}</h3>
-                      </div>
                     </div>
-                    <p className="text-gray-300 leading-relaxed">{event.description}</p>
+                    
+                    {/* Decorative Elements */}
+                    <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-500 rounded-full opacity-60"></div>
+                    <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-yellow-400 rounded-full opacity-60"></div>
+                    <div className="absolute top-1/2 -left-8 w-4 h-4 bg-red-500 rounded-full opacity-60"></div>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
 

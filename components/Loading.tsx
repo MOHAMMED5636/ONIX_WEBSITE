@@ -33,14 +33,11 @@ export default function Loading() {
         {/* Logo Animation */}
         <div className="mb-8">
           <div className="w-20 h-20 bg-white rounded-xl flex items-center justify-center mx-auto shadow-2xl animate-pulse">
-            <div className="relative w-12 h-12">
-              {/* Outer crescent */}
-              <div className="absolute w-12 h-12 border-4 border-gray-900 rounded-full border-r-0 border-b-0 transform rotate-45 animate-spin"></div>
-              {/* Middle crescent */}
-              <div className="absolute w-8 h-8 border-2 border-gray-900 rounded-full border-r-0 border-b-0 transform rotate-45 top-1 left-1 animate-spin" style={{animationDirection: 'reverse', animationDuration: '1.5s'}}></div>
-              {/* Inner crescent */}
-              <div className="absolute w-4 h-4 border border-gray-900 rounded-full border-r-0 border-b-0 transform rotate-45 top-2 left-2 animate-spin" style={{animationDirection: 'normal', animationDuration: '2s'}}></div>
-            </div>
+            <img 
+              src="/images/ONIX_LOGO.png" 
+              alt="ONIX Logo" 
+              className="w-12 h-12 object-contain animate-spin"
+            />
           </div>
         </div>
 

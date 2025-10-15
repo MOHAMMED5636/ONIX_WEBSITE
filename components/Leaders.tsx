@@ -21,6 +21,7 @@ export default function Leaders() {
       title: 'Chief Executive Officer',
       description: 'A visionary leader with over 25 years of experience in engineering and construction, Rameez has been instrumental in shaping Onix Group into a powerhouse of innovation and excellence.',
       image: '/images/rameez-kaddour.png',
+      slug: 'rameez-kaddour',
       achievements: [
         'Led company growth from startup to industry leader',
         'Pioneered sustainable construction practices',
@@ -32,6 +33,7 @@ export default function Leaders() {
       title: 'Chief Operating Officer',
       description: 'With a strategic mindset and exceptional operational expertise, Ahmed has driven the company\'s growth across multiple sectors, ensuring excellence in every project undertaken.',
       image: '/images/ahmed al kaddour.png',
+      slug: 'ahmed-al-kaddour',
       achievements: [
         'Optimized operational efficiency by 40%',
         'Managed over 200 successful projects',
@@ -43,6 +45,7 @@ export default function Leaders() {
       title: 'Founding Chairman',
       description: 'The visionary founder who laid the foundation of Onix Group, Kaddour\'s entrepreneurial spirit and unwavering commitment to quality have been the cornerstone of our success story.',
       image: '/images/kaddour.png',
+      slug: 'kaddour-al-kaddour',
       achievements: [
         'Founded Onix Group in 1995',
         'Established company values and culture',
@@ -54,6 +57,7 @@ export default function Leaders() {
       title: 'Chief Financial Officer',
       description: 'A financial strategist par excellence, Nabil has steered the company through dynamic market conditions with prudent fiscal management and forward-thinking investment strategies.',
       image: '/images/nabil.png',
+      slug: 'nabil-al-kaddour',
       achievements: [
         'Maintained financial stability through market cycles',
         'Secured major funding for expansion',
@@ -162,13 +166,16 @@ export default function Leaders() {
                     </ul>
                   </div>
                   
-                  {/* Explore Button */}
-                  <button className="inline-flex items-center px-4 py-2 border-2 border-white text-white hover:bg-white hover:text-gray-900 transition-all duration-300 rounded-lg group text-sm">
+                  {/* Learn More Button */}
+                  <Link 
+                    href={`/leader/${leader.slug}`}
+                    className="inline-flex items-center px-4 py-2 border-2 border-white text-white hover:bg-white hover:text-gray-900 transition-all duration-300 rounded-lg group text-sm"
+                  >
                     <span className="mr-2">Learn More</span>
                     <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

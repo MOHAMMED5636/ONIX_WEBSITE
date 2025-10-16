@@ -235,7 +235,6 @@ export default function Timeline() {
                     
                     {/* Decorative Elements */}
                     <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-500 rounded-full opacity-60"></div>
-                    <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-yellow-400 rounded-full opacity-60"></div>
                     <div className="absolute top-1/2 -left-8 w-4 h-4 bg-red-500 rounded-full opacity-60"></div>
                   </div>
                 </div>

@@ -295,16 +295,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Construction Worker Figure - Right side like Al Shirawi */}
-        <div className="absolute bottom-0 right-0 w-1/3 h-1/2 z-10">
-          <div className="w-full h-full bg-gradient-to-t from-gray-800 to-transparent flex items-end justify-center">
-            <div className="w-32 h-40 bg-gray-700 rounded-t-full flex items-center justify-center mb-4">
-              <div className="w-24 h-24 bg-yellow-400 rounded-full flex items-center justify-center">
-                <div className="w-16 h-16 bg-gray-800 rounded-full"></div>
-              </div>
-            </div>
-          </div>
-        </div>
 
       </section>
 

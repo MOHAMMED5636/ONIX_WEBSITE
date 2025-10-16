@@ -180,7 +180,6 @@ export default function CompaniesOverview() {
             {/* Floating Elements for Visual Appeal */}
             <div className="absolute top-1/4 left-10 w-4 h-4 bg-blue-400 rounded-full opacity-60 animate-pulse"></div>
             <div className="absolute top-1/3 right-16 w-6 h-6 bg-white/30 rounded-full opacity-40 animate-ping"></div>
-            <div className="absolute bottom-1/4 left-1/4 w-3 h-3 bg-yellow-400 rounded-full opacity-50 animate-bounce"></div>
           </div>
         </div>
       </div>

@@ -8,27 +8,6 @@ export default function Hero() {
   const router = useRouter()
   const [showAboutDropdown, setShowAboutDropdown] = useState(false)
   const [showMobileMenu, setShowMobileMenu] = useState(false)
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
-
-  // Engineering Consulting background images
-  const backgroundImages = [
-    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80", // Modern skyscrapers
-    "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80", // Engineering blueprints
-    "https://images.unsplash.com/photo-1581094794329-c8112af01d4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80", // Modern architecture
-    "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80", // Corporate buildings
-    "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"  // Professional consulting
-  ]
-
-  // Auto-change images every 5 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => 
-        prevIndex === backgroundImages.length - 1 ? 0 : prevIndex + 1
-      )
-    }, 5000)
-
-    return () => clearInterval(interval)
-  }, [backgroundImages.length])
 
   // Close dropdowns when clicking outside
   useEffect(() => {
@@ -129,18 +108,15 @@ export default function Hero() {
               )}
             </div>
             
-            <button 
-              className="text-white hover:text-blue-400 font-medium transition-all duration-300 text-sm uppercase tracking-wide cursor-pointer relative group bg-transparent border-none"
-              onClick={(e) => {
-                e.preventDefault();
-                document.getElementById('companies')?.scrollIntoView({ behavior: 'smooth' });
-              }}
+            <Link 
+              href="/companies"
+              className="text-white hover:text-blue-400 font-medium transition-all duration-300 text-sm uppercase tracking-wide cursor-pointer relative group"
             >
               <span className="relative">
                 COMPANIES
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
               </span>
-            </button>
+            </Link>
             <button 
               className="text-white hover:text-blue-400 font-medium transition-all duration-300 text-sm uppercase tracking-wide cursor-pointer relative group bg-transparent border-none"
               onClick={(e) => {
@@ -238,15 +214,13 @@ export default function Hero() {
                     >
                       ABOUT
                     </button>
-                    <button 
-                      onClick={() => {
-                        setShowMobileMenu(false);
-                        document.getElementById('companies')?.scrollIntoView({ behavior: 'smooth' });
-                      }}
+                    <Link 
+                      href="/companies"
+                      onClick={() => setShowMobileMenu(false)}
                       className="block w-full text-left text-xl font-semibold text-white hover:text-blue-400 transition-colors duration-200 bg-transparent border-none"
                     >
                       COMPANIES
-                    </button>
+                    </Link>
                     <button 
                       onClick={() => {
                         setShowMobileMenu(false);
@@ -283,24 +257,17 @@ export default function Hero() {
 
         {/* Background */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
-          {/* Dynamic Background Images with smooth transitions */}
-          {backgroundImages.map((image, index) => (
-            <div
-              key={index}
-              className={`absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
-                index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-              }`}
-              style={{
-                backgroundImage: `url('${image}')`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                width: '100%',
-                height: '100%',
-                minHeight: '100vh'
-              }}
-            />
-          ))}
+          {/* Video Background */}
+          <video
+            className="w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+          >
+            <source src="/images/construction-video.mp4" type="video/mp4" />
+          </video>
           
           {/* Subtle overlay for better text readability */}
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -321,9 +288,9 @@ export default function Hero() {
               </p>
               
               {/* Explore Button like Al Shirawi */}
-              <button className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-medium text-sm uppercase tracking-wide hover:bg-white hover:text-gray-900 transition-all duration-300 rounded-none">
+              <Link href="/explore" className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-medium text-sm uppercase tracking-wide hover:bg-white hover:text-gray-900 transition-all duration-300 rounded-none">
                 EXPLORE
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -339,20 +306,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Image Indicators/Dots */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
-          {backgroundImages.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentImageIndex(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentImageIndex 
-                  ? 'bg-white scale-125' 
-                  : 'bg-white bg-opacity-50 hover:bg-opacity-75'
-              }`}
-            />
-          ))}
-        </div>
       </section>
 
       {/* Service Icons Row - Like Al Shirawi */}

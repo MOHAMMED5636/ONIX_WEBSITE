@@ -79,13 +79,9 @@ export default function About() {
               {/* Main Content */}
               <div className="space-y-4 sm:space-y-6 text-center">
                 <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed">
-                  With over a decade of experience across multiple industries, Onix Group of Companies 
-                  has established itself as a trusted partner for complex business challenges. Our diverse portfolio 
-                  of companies delivers innovative solutions that exceed expectations.
-                </p>
-                <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
-                  We operate across various sectors including engineering, technology, construction, infrastructure, 
-                  and project management, serving clients with commitment to quality and excellence.
+                  With over a decade of experience, Onix Group of Companies delivers innovative solutions.<br />
+                  Our diverse portfolio serves clients across engineering, technology, and construction.<br />
+                  We are committed to quality, excellence, and exceeding expectations.
                 </p>
               </div>
               
@@ -137,13 +133,9 @@ export default function About() {
           <div className="max-w-4xl mx-auto">
             <div className="space-y-6 sm:space-y-8 text-center">
               <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed">
-                Our leadership team brings together decades of experience across engineering, construction, 
-                and business management. Each leader is committed to driving innovation and delivering 
-                exceptional results for our clients.
-              </p>
-              <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
-                Under their guidance, Onix Group has grown into a diversified conglomerate with a strong 
-                reputation for excellence and reliability in the engineering consulting industry.
+                Our leadership team brings together decades of experience across engineering and construction.<br />
+                Each leader is committed to driving innovation and delivering exceptional results.<br />
+                Under their guidance, Onix Group has grown into a diversified conglomerate with excellence.
               </p>
             </div>
           </div>
@@ -166,18 +158,15 @@ export default function About() {
           <div className="max-w-4xl mx-auto">
             <div className="space-y-6 sm:space-y-8 text-center">
               <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed">
-                At Onix Group, sustainability is at the core of our engineering solutions. We integrate 
-                environmentally conscious practices into every project, ensuring long-term benefits for 
-                communities and the planet.
-              </p>
-              <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
-                Our commitment to sustainable development drives innovation in green technologies, 
-                energy efficiency, and responsible construction practices across all our companies.
+                At Onix Group, sustainability is at the core of our engineering solutions.<br />
+                We integrate environmentally conscious practices into every project.<br />
+                Our commitment drives innovation in green technologies and energy efficiency.
               </p>
             </div>
           </div>
         </div>
       </section>
+
     </>
   )
 }

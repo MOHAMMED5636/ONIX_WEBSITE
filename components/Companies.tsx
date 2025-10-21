@@ -11,9 +11,8 @@ export default function Companies() {
         'Quality Assurance',
         'Project Planning'
       ],
-      icon: '🏗️',
-      color: 'from-blue-600 to-blue-800',
-      customLogo: true
+      icon: '',
+      color: 'from-blue-600 to-blue-800'
     },
     {
       name: 'ONIX PLUS',
@@ -26,7 +25,7 @@ export default function Companies() {
         'Cost Management',
         'Timeline Control'
       ],
-      icon: '🏢',
+      icon: '',
       color: 'from-green-600 to-green-800'
     },
     {
@@ -40,12 +39,41 @@ export default function Companies() {
         '3D Visualization',
         'Design Consultation'
       ],
-      icon: '🎨',
+      icon: '',
       color: 'from-pink-600 to-pink-800'
+    },
+    {
+      name: 'ONIX PRIME',
+      description: 'Professional accounting and tax consultancy services providing comprehensive financial solutions.',
+      services: [
+        'Tax Consultancy',
+        'Financial Planning',
+        'Accounting Services',
+        'Audit Services',
+        'Business Advisory',
+        'Compliance Management'
+      ],
+      icon: '',
+      color: 'from-purple-600 to-purple-800'
+    },
+    {
+      name: 'CRIMSON',
+      description: 'Specialized steel containing and metal fabrication services for industrial and construction projects.',
+      services: [
+        'Steel Fabrication',
+        'Metal Containers',
+        'Industrial Storage',
+        'Custom Fabrication',
+        'Quality Control',
+        'Project Delivery'
+      ],
+      icon: '',
+      color: 'from-red-600 to-red-800'
     }
   ]
 
   return (
+    <>
     <section id="companies" className="py-12 sm:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -121,24 +149,10 @@ export default function Companies() {
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-12 sm:mt-16">
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/10">
-            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4">
-              Ready to Work With Our Companies?
-            </h3>
-            <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-6 max-w-2xl mx-auto">
-              Contact us to discuss how our diverse portfolio of companies can meet your specific project requirements.
-            </p>
-            <a 
-              href="#contact" 
-              className="inline-block bg-white text-gray-900 px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg text-sm sm:text-base"
-            >
-              Get In Touch
-            </a>
-          </div>
-        </div>
       </div>
     </section>
+
+
+    </>
   )
 }

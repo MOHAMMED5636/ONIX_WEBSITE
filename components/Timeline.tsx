@@ -17,39 +17,39 @@ export default function Timeline() {
 
   const timelineEvents = [
     {
-      number: '02',
-      title: 'Taking the first steps towards constructing a solid foundation',
-      description: 'This was the year the UAE was founded, claiming an identity for itself, with a major thrust into construction as everything had to be built from the ground up - villas, hotels and buildings as well. The newly-formed Onix Group made its foray in the world of trading. However, soon, sensing the growing potential of construction, the Founders of the Onix Group moved the business to trading related to construction, building materials, and steel to name a few.',
+      number: '01',
+      title: 'Digital Transformation and Innovation Leadership',
+      description: 'In 2021, Onix Group embraced digital transformation, implementing cutting-edge technologies and innovative solutions across all our companies. We launched our digital-first approach to engineering and construction, setting new industry standards.',
       image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      year: '1995'
+      year: '2021'
+    },
+    {
+      number: '02',
+      title: 'Sustainable Engineering Excellence',
+      description: '2022 marked our commitment to sustainable engineering practices. We integrated green technologies and eco-friendly solutions into all our projects, leading the industry in environmental responsibility and sustainable development.',
+      image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      year: '2022'
     },
     {
       number: '03',
-      title: 'Contributing to a growing nation, through the power of engineering',
-      description: 'Around the same time, there was another story in the making - the story of two young men with big dreams. The founders of Onix Group, who had a vision to revolutionize the engineering and construction industry, wanted to build something extraordinary together.',
-      image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      year: '2000'
+      title: 'Global Expansion and Strategic Partnerships',
+      description: 'In 2023, Onix Group expanded its global footprint, establishing strategic partnerships with international companies. We opened new offices and launched projects across multiple continents, solidifying our position as a global engineering leader.',
+      image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      year: '2023'
     },
     {
       number: '04',
-      title: 'Shaping the destiny of the UAE, one project at a time',
-      description: 'Around the mid-2000s - 2005 to be precise - construction and infrastructure development sprang up bountifully in the Middle East. With a finger firmly placed on the pulse of the nation, the Group made its foray into the Oil and Gas industry, anticipating the need for the supply of transportation and process equipment.',
-      image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      year: '2005'
+      title: 'AI and Smart Technology Integration',
+      description: '2024 brought revolutionary AI integration into our engineering processes. We implemented smart construction technologies, automated project management systems, and AI-powered design solutions, revolutionizing how we approach complex engineering challenges.',
+      image: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      year: '2024'
     },
     {
       number: '05',
-      title: 'Expanding to greater horizons with the rise of technology',
-      description: 'Expansion was one of the main keywords in the late 2000s in the UAE, both for the Group and the nation in its combined growth story, it stood to reason that a stronghold should be created in the technology industry. And so it was that Onix International Engineering was formed, serving as a solutions-provider for the repair, remanufacturing and manufacturing of industrial equipment.',
-      image: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      year: '2010'
-    },
-    {
-      number: '06',
-      title: 'Expansion in the UAE of the 2010s',
-      description: 'The group joined the nation in its growth story, stepping boldly into repair, remanufacturing and manufacturing.',
+      title: 'Future-Ready Engineering Solutions',
+      description: 'As we look toward 2025, Onix Group continues to pioneer the future of engineering. We are developing next-generation solutions, investing in emerging technologies, and preparing for the challenges and opportunities of tomorrow.',
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      year: '2015'
+      year: '2025'
     }
   ]
 
@@ -61,14 +61,12 @@ export default function Timeline() {
           {/* Onix Logo Animation */}
           <div className="mb-8 animate-pulse">
             <img 
-              src="/images/ONIX_LOGO.png" 
+              src="/images/ONIX GROUP 0002.png" 
               alt="ONIX Logo" 
-              className="w-32 h-32 object-contain mx-auto"
+              className="w-56 h-56 object-contain mx-auto"
             />
           </div>
           
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">ONIX</h1>
-          <p className="text-xl text-gray-300">GROUP OF COMPANIES</p>
           
           {/* Loading dots */}
           <div className="flex justify-center items-center space-x-2 mt-8">
@@ -82,9 +80,23 @@ export default function Timeline() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div className="min-h-screen relative">
+      {/* Video Background */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
+        <video
+          className="w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+        >
+          <source src="/images/construction-video.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/40"></div>
+      </div>
       {/* Back Button */}
-      <div className="fixed top-8 left-8 z-50">
+      <div className="fixed top-8 left-8 z-50 relative">
         <Link href="/" className="inline-flex items-center text-white hover:text-blue-400 transition-colors duration-300">
           <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -94,20 +106,18 @@ export default function Timeline() {
       </div>
 
       {/* Onix Logo - Top Center */}
-      <div className="pt-6 pb-6 text-center">
+      <div className="pt-6 pb-6 text-center relative z-20">
         <div className="flex items-center justify-center mb-2">
           <img 
-            src="/images/ONIX_LOGO.png" 
+            src="/images/ONIX GROUP 0002.png" 
             alt="ONIX Logo" 
-            className="w-16 h-16 object-contain"
+            className="w-40 h-40 object-contain"
           />
         </div>
-        <h1 className="text-2xl font-bold text-white">ONIX</h1>
-        <p className="text-xs text-gray-300">GROUP OF COMPANIES</p>
       </div>
 
       {/* Main Headline */}
-      <div className="text-center py-6 px-4">
+      <div className="text-center py-6 px-4 relative z-20">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-2 tracking-wide">
           OUR STORY
         </h2>
@@ -117,9 +127,9 @@ export default function Timeline() {
       </div>
 
       {/* Introductory Story Section - Above Timeline */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-20">
         <div className="relative min-h-screen flex items-center">
-          <div className="relative z-10 w-full">
+          <div className="relative z-20 w-full">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
               {/* Left Side - Text Content */}
               <div className="space-y-6">
@@ -199,7 +209,7 @@ export default function Timeline() {
                 {event.number}
               </div>
               
-              <div className="relative z-10 w-full">
+              <div className="relative z-20 w-full">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
                   {/* Left Side - Text Content */}
                   <div className="space-y-6">
@@ -259,6 +269,120 @@ export default function Timeline() {
             </svg>
           </Link>
         </div>
+      </div>
+
+      {/* Contact Section */}
+      <section className="py-12 sm:py-20 bg-gray-800 relative z-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 uppercase tracking-wide">
+              STEP INTO THE WORLD OF ONIX GROUP OF COMPANIES
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+              Ready to start your next project?<br />
+              Contact us for a consultation.<br />
+              Let's discuss how our group of companies can help.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+            {/* Contact Information */}
+            <div className="space-y-8">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-white text-lg">123 Engineering Street, Business District, City 12345</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-white text-lg">+1 (555) 123-4567</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-white text-lg">Info@onixengineering.com</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-white text-lg">Monday - Friday: 8:00 AM - 6:00 PM</p>
+                  <p className="text-white text-lg">Saturday: 9:00 AM - 2:00 PM</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Form */}
+            <div className="bg-gray-900 p-8 rounded-lg">
+              <h3 className="text-2xl font-bold text-white mb-6">Send us a Message</h3>
+              <form className="space-y-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Your name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">Phone Number</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="AE (+971) 50 123 4567"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="w-full bg-white text-gray-900 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+                >
+                  Request a manager's consultation
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WhatsApp Floating Button */}
+      <div className="fixed bottom-6 right-6 z-50">
+        <a 
+          href="https://wa.me/97142838880?text=Hello%20ONIX%20Group%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
+        >
+          <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+          </svg>
+        </a>
       </div>
 
       {/* Footer Spacing */}

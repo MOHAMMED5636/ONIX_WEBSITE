@@ -34,9 +34,9 @@ export default function Loading() {
         <div className="mb-8">
           <div className="w-20 h-20 bg-white rounded-xl flex items-center justify-center mx-auto shadow-2xl animate-pulse">
             <img 
-              src="/images/ONIX_LOGO.png" 
+              src="/images/ONIX GROUP 0002.png" 
               alt="ONIX Logo" 
-              className="w-12 h-12 object-contain animate-spin"
+              className="w-16 h-16 object-contain animate-spin"
             />
           </div>
         </div>
@@ -44,10 +44,8 @@ export default function Loading() {
         {/* Company Name */}
         <div className="mb-8">
           <h1 className="text-4xl font-bold text-white mb-2 animate-fade-in">
-            ONIX
           </h1>
           <p className="text-lg text-gray-300 animate-fade-in" style={{animationDelay: '0.5s'}}>
-            GROUP OF COMPANIES
           </p>
         </div>
 

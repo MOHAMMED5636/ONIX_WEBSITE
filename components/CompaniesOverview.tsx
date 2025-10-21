@@ -23,14 +23,12 @@ export default function CompaniesOverview() {
           {/* Onix Logo Animation */}
           <div className="mb-8 animate-pulse">
             <img 
-              src="/images/ONIX_LOGO.png" 
+              src="/images/ONIX GROUP 0002.png" 
               alt="ONIX Logo" 
-              className="w-32 h-32 object-contain mx-auto"
+              className="w-40 h-40 object-contain mx-auto"
             />
           </div>
           
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">ONIX</h1>
-          <p className="text-xl text-gray-300">GROUP OF COMPANIES</p>
           
           {/* Loading dots */}
           <div className="flex justify-center items-center space-x-2 mt-8">
@@ -61,16 +59,14 @@ export default function CompaniesOverview() {
       </div>
 
       {/* Onix Logo - Top Left - Clickable */}
-      <div className="absolute top-8 left-8 z-50">
+      <div className="absolute top-4 left-8 z-50">
         <Link href="/" className="flex items-center hover:opacity-80 transition-opacity duration-300 cursor-pointer">
           <img 
-            src="/images/ONIX_LOGO.png" 
+            src="/images/ONIX GROUP 0002.png" 
             alt="ONIX Logo" 
-            className="w-16 h-16 object-contain mr-4"
+            className="w-40 h-40 object-contain mr-4"
           />
           <div>
-            <h1 className="text-2xl font-bold text-white">ONIX</h1>
-            <p className="text-xs text-gray-300">GROUP OF COMPANIES</p>
           </div>
         </Link>
       </div>
@@ -212,6 +208,99 @@ export default function CompaniesOverview() {
 
       {/* Footer Spacing */}
       <div className="h-12"></div>
+
+      {/* Contact Section */}
+      <section className="py-12 sm:py-20 bg-gray-900 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 uppercase tracking-wide">
+              STEP INTO THE WORLD OF ONIX GROUP OF COMPANIES
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+              Ready to start your next project?<br />
+              Contact us for a consultation.<br />
+              Let's discuss how our group of companies can help.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Contact Information */}
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-6">Contact Information</h3>
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mr-4">
+                    <span className="text-white">📍</span>
+                  </div>
+                  <div>
+                    <p className="text-white font-medium">Address</p>
+                    <p className="text-gray-300">123 Engineering Street, Business District, City 12345</p>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mr-4">
+                    <span className="text-white">📞</span>
+                  </div>
+                  <div>
+                    <p className="text-white font-medium">Phone</p>
+                    <p className="text-gray-300">+1 (555) 123-4567</p>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mr-4">
+                    <span className="text-white">✉️</span>
+                  </div>
+                  <div>
+                    <p className="text-white font-medium">Email</p>
+                    <p className="text-gray-300">info@onixengineering.com</p>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mr-4">
+                    <span className="text-white">🕒</span>
+                  </div>
+                  <div>
+                    <p className="text-white font-medium">Business Hours</p>
+                    <p className="text-gray-300">Monday - Friday: 8:00 AM - 6:00 PM</p>
+                    <p className="text-gray-300">Saturday: 9:00 AM - 2:00 PM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Form */}
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-6">Send us a Message</h3>
+              <form className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Your Name *</label>
+                  <input
+                    type="text"
+                    required
+                    className="w-full px-4 py-3 border border-gray-600 bg-gray-700 text-white rounded-lg focus:ring-2 focus:ring-white focus:border-transparent"
+                    placeholder="Your name"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Phone Number *</label>
+                  <input
+                    type="tel"
+                    required
+                    className="w-full px-4 py-3 border border-gray-600 bg-gray-700 text-white rounded-lg focus:ring-2 focus:ring-white focus:border-transparent"
+                    placeholder="AE (+971) 50 123 4567"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="w-full bg-white text-gray-900 py-3 px-6 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg"
+                >
+                  Request a manager's consultation
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Custom CSS for Animations */}
       <style jsx>{`

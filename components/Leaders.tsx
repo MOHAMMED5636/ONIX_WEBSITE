@@ -209,7 +209,8 @@ export default function Leaders() {
                   alt={index === 0 ? 'Sami Ibrahim' : `Team Member ${index + 1}`}
                   className="w-full h-full object-cover object-top"
                   onError={(e) => {
-                    e.target.src = `https://ui-avatars.com/api/?name=${index === 0 ? 'Sami Ibrahim' : `TM${index + 1}`}&background=3b82f6&color=ffffff&size=150`;
+                    const target = e.target as HTMLImageElement;
+                    target.src = `https://ui-avatars.com/api/?name=${index === 0 ? 'Sami Ibrahim' : `TM${index + 1}`}&background=3b82f6&color=ffffff&size=150`;
                   }}
                 />
               </div>

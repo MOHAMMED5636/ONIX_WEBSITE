@@ -97,23 +97,9 @@ export default function Companies() {
             <div key={index} className="bg-gray-900/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 lg:p-8 shadow-2xl border border-white/10 hover:shadow-3xl transition-all duration-300 hover:scale-105 group">
               {/* Company Header */}
               <div className="text-center mb-4 sm:mb-6">
-                {company.customLogo ? (
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-black rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300 border border-gray-700">
-                    {/* Custom ONIX Engineering Consultancy Logo */}
-                    <div className="relative w-12 h-12 sm:w-16 sm:h-16">
-                      {/* Top-left cyan crescent */}
-                      <div className="absolute w-6 h-6 sm:w-8 sm:h-8 border-2 sm:border-3 border-cyan-400 rounded-full border-r-0 border-b-0 transform rotate-45 top-0 left-0"></div>
-                      {/* Bottom-left orange crescent */}
-                      <div className="absolute w-4 h-4 sm:w-6 sm:h-6 border-2 border-orange-400 rounded-full border-r-0 border-b-0 transform rotate-45 bottom-0 left-0"></div>
-                      {/* Right gray crescent */}
-                      <div className="absolute w-5 h-5 sm:w-7 sm:h-7 border-2 border-gray-300 rounded-full border-r-0 border-b-0 transform rotate-45 top-0.5 sm:top-1 right-0"></div>
-                    </div>
-                  </div>
-                ) : (
-                  <div className={`w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br ${company.color} rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                    <span className="text-xl sm:text-2xl">{company.icon}</span>
-                  </div>
-                )}
+                <div className={`w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br ${company.color} rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                  <span className="text-xl sm:text-2xl">{company.icon}</span>
+                </div>
                 <h3 className="text-base sm:text-lg lg:text-xl font-bold text-white mb-2 group-hover:text-white/90 transition-colors duration-300">
                   {company.name}
                 </h3>

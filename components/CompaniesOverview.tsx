@@ -25,7 +25,7 @@ export default function CompaniesOverview() {
             <img 
               src="/images/ONIX GROUP 0002.png" 
               alt="ONIX Logo" 
-              className="w-40 h-40 object-contain mx-auto"
+              className="w-48 h-48 object-contain mx-auto"
             />
           </div>
           
@@ -59,12 +59,12 @@ export default function CompaniesOverview() {
       </div>
 
       {/* Onix Logo - Top Left - Clickable */}
-      <div className="absolute top-4 left-8 z-50">
+      <div className="absolute -top-16 left-8 sm:-top-20 z-50">
         <Link href="/" className="flex items-center hover:opacity-80 transition-opacity duration-300 cursor-pointer">
           <img 
             src="/images/ONIX GROUP 0002.png" 
             alt="ONIX Logo" 
-            className="w-40 h-40 object-contain mr-4"
+            className="w-64 h-64 sm:w-72 sm:h-72 object-contain mr-4"
           />
           <div>
           </div>

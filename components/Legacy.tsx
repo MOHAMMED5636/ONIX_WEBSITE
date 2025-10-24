@@ -26,7 +26,7 @@ export default function Legacy() {
             <img 
               src="/images/ONIX GROUP 0002.png" 
               alt="ONIX Logo" 
-              className="w-40 h-40 object-contain mx-auto"
+              className="w-48 h-48 object-contain mx-auto"
             />
           </div>
           
@@ -44,26 +44,15 @@ export default function Legacy() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
-      {/* Home Button - Top Left */}
-      <div className="fixed top-8 left-8 z-50">
-        <Link href="/" className="inline-flex items-center text-white hover:text-blue-400 transition-colors duration-300">
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-          </svg>
-        </Link>
-      </div>
-
-      {/* ONIX Logo and Text - Top Center */}
-      <div className="fixed top-8 left-1/2 transform -translate-x-1/2 z-50">
-        <div className="flex items-center">
+      {/* ONIX Logo - Top Left (Clickable to Home) */}
+      <div className="fixed -top-20 left-0 z-50">
+        <Link href="/" className="inline-block hover:opacity-80 transition-opacity duration-300">
           <img 
             src="/images/ONIX GROUP 0002.png" 
             alt="ONIX Logo" 
-            className="w-20 h-20 object-contain mr-3"
+            className="w-56 h-56 object-contain"
           />
-          <div>
-          </div>
-        </div>
+        </Link>
       </div>
 
       {/* Main Content - Responsive Layout */}

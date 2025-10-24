@@ -77,7 +77,7 @@ export default function Leaders() {
             <img 
               src="/images/ONIX GROUP 0002.png" 
               alt="ONIX Logo" 
-              className="w-40 h-40 object-contain mx-auto"
+              className="w-48 h-48 object-contain mx-auto"
             />
           </div>
           
@@ -125,7 +125,7 @@ export default function Leaders() {
           <img 
             src="/images/ONIX GROUP 0002.png" 
             alt="ONIX Logo" 
-            className="w-24 h-24 object-contain"
+            className="w-32 h-32 object-contain"
           />
         </div>
       </div>

@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
+import ScrollSection from './ScrollSection'
 
 export default function Timeline() {
   const [isLoading, setIsLoading] = useState(true)
@@ -63,7 +65,7 @@ export default function Timeline() {
             <img 
               src="/images/ONIX GROUP 0002.png" 
               alt="ONIX Logo" 
-              className="w-56 h-56 object-contain mx-auto"
+              className="w-64 h-64 object-contain mx-auto"
             />
           </div>
           
@@ -111,7 +113,7 @@ export default function Timeline() {
           <img 
             src="/images/ONIX GROUP 0002.png" 
             alt="ONIX Logo" 
-            className="w-40 h-40 object-contain"
+            className="w-48 h-48 object-contain"
           />
         </div>
       </div>
@@ -131,59 +133,63 @@ export default function Timeline() {
         <div className="relative min-h-screen flex items-center">
           <div className="relative z-20 w-full">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-              {/* Left Side - Text Content */}
-              <div className="space-y-6">
-                {/* Main Title */}
-                <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                  Growing up with a Glorious Nation
-                </h3>
-                
-                {/* Description */}
+              {/* Left Side - Text Content with Scroll Animation */}
+              <ScrollSection direction="right">
                 <div className="space-y-6">
-                  <p className="text-lg text-gray-300 leading-relaxed">
-                    This story dates back to the 1990s, to that moment in time destined to forevermore be marked in the history of the world. 
-                    Engineering and construction had first been discovered as the backbone of development in the UAE in 1995.
-                  </p>
+                  {/* Main Title */}
+                  <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                    Growing up with a Glorious Nation
+                  </h3>
                   
-                  <p className="text-lg text-gray-300 leading-relaxed">
-                    Around the same time, there was another story in the making - the story of two young men with big dreams. 
-                    The founders of Onix Group, who had a vision to revolutionize the engineering and construction industry, 
-                    wanted to build something extraordinary together.
-                  </p>
-                  
-                  <p className="text-lg text-gray-300 leading-relaxed">
-                    And so the Onix Group came into being, built on the aspirations of visionary leaders and an unwavering 
-                    commitment to excellence in engineering and construction services.
-                  </p>
-                </div>
-              </div>
-              
-              {/* Right Side - Blue and Red Logo */}
-              <div className="relative">
-                <div className="w-full h-96 lg:h-[500px] rounded-full overflow-hidden border-4 border-white/20 shadow-2xl bg-gradient-to-br from-blue-600 via-blue-800 to-red-600 flex items-center justify-center">
-                  {/* Blue and Red Logo Design */}
-                  <div className="relative">
-                    {/* Blue Circle */}
-                    <div className="w-32 h-32 lg:w-48 lg:h-48 bg-blue-500 rounded-full flex items-center justify-center shadow-2xl">
-                      {/* Red Circle Inside */}
-                      <div className="w-20 h-20 lg:w-32 lg:h-32 bg-red-500 rounded-full flex items-center justify-center">
-                        {/* White ONIX Text */}
-                        <div className="text-white font-bold text-2xl lg:text-4xl">
-                          O
-                        </div>
-                      </div>
-                    </div>
+                  {/* Description */}
+                  <div className="space-y-6">
+                    <p className="text-lg text-gray-300 leading-relaxed">
+                      This story dates back to the 1990s, to that moment in time destined to forevermore be marked in the history of the world. 
+                      Engineering and construction had first been discovered as the backbone of development in the UAE in 1995.
+                    </p>
                     
-                    {/* Blue Ring Around */}
-                    <div className="absolute inset-0 w-32 h-32 lg:w-48 lg:h-48 border-4 border-blue-300 rounded-full animate-pulse"></div>
+                    <p className="text-lg text-gray-300 leading-relaxed">
+                      Around the same time, there was another story in the making - the story of two young men with big dreams. 
+                      The founders of Onix Group, who had a vision to revolutionize the engineering and construction industry, 
+                      wanted to build something extraordinary together.
+                    </p>
+                    
+                    <p className="text-lg text-gray-300 leading-relaxed">
+                      And so the Onix Group came into being, built on the aspirations of visionary leaders and an unwavering 
+                      commitment to excellence in engineering and construction services.
+                    </p>
                   </div>
                 </div>
-                
-                {/* Decorative Elements */}
-                <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-500 rounded-full opacity-60"></div>
-                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-red-500 rounded-full opacity-60"></div>
-                <div className="absolute top-1/2 -left-8 w-4 h-4 bg-blue-400 rounded-full opacity-60"></div>
-              </div>
+              </ScrollSection>
+              
+              {/* Right Side - Blue and Red Logo with Scroll Animation */}
+              <ScrollSection direction="left">
+                <div className="relative">
+                  <div className="w-full h-96 lg:h-[500px] rounded-full overflow-hidden border-4 border-white/20 shadow-2xl bg-gradient-to-br from-blue-600 via-blue-800 to-red-600 flex items-center justify-center">
+                    {/* Blue and Red Logo Design */}
+                    <div className="relative">
+                      {/* Blue Circle */}
+                      <div className="w-32 h-32 lg:w-48 lg:h-48 bg-blue-500 rounded-full flex items-center justify-center shadow-2xl">
+                        {/* Red Circle Inside */}
+                        <div className="w-20 h-20 lg:w-32 lg:h-32 bg-red-500 rounded-full flex items-center justify-center">
+                          {/* White ONIX Text */}
+                          <div className="text-white font-bold text-2xl lg:text-4xl">
+                            O
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Blue Ring Around */}
+                      <div className="absolute inset-0 w-32 h-32 lg:w-48 lg:h-48 border-4 border-blue-300 rounded-full animate-pulse"></div>
+                    </div>
+                  </div>
+                  
+                  {/* Decorative Elements */}
+                  <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-500 rounded-full opacity-60"></div>
+                  <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-red-500 rounded-full opacity-60"></div>
+                  <div className="absolute top-1/2 -left-8 w-4 h-4 bg-blue-400 rounded-full opacity-60"></div>
+                </div>
+              </ScrollSection>
             </div>
           </div>
         </div>
@@ -211,42 +217,46 @@ export default function Timeline() {
               
               <div className="relative z-20 w-full">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-                  {/* Left Side - Text Content */}
-                  <div className="space-y-6">
-                    {/* Oval Text Box */}
-                    <div className="bg-white/5 backdrop-blur-sm rounded-full px-8 py-4 border border-white/20">
-                      <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight">
-                        {event.title}
-                      </h3>
-                    </div>
-                    
-                    {/* Description */}
-                    <div className="space-y-4">
-                      <p className="text-lg text-gray-300 leading-relaxed">
-                        {event.description}
-                      </p>
+                  {/* Left Side - Text Content with Scroll Animation */}
+                  <ScrollSection direction="right">
+                    <div className="space-y-6">
+                      {/* Oval Text Box */}
+                      <div className="bg-white/5 backdrop-blur-sm rounded-full px-8 py-4 border border-white/20">
+                        <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight">
+                          {event.title}
+                        </h3>
+                      </div>
                       
-                      {/* Year Badge */}
-                      <div className="inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        {event.year}
+                      {/* Description */}
+                      <div className="space-y-4">
+                        <p className="text-lg text-gray-300 leading-relaxed">
+                          {event.description}
+                        </p>
+                        
+                        {/* Year Badge */}
+                        <div className="inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                          {event.year}
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </ScrollSection>
                   
-                  {/* Right Side - Image */}
-                  <div className="relative">
-                    <div className="w-full h-96 lg:h-[500px] rounded-full overflow-hidden border-4 border-white/20 shadow-2xl">
-                      <img 
-                        src={event.image} 
-                        alt={event.title}
-                        className="w-full h-full object-cover"
-                      />
+                  {/* Right Side - Image with Scroll Animation */}
+                  <ScrollSection direction="left">
+                    <div className="relative">
+                      <div className="w-full h-96 lg:h-[500px] rounded-full overflow-hidden border-4 border-white/20 shadow-2xl">
+                        <img 
+                          src={event.image} 
+                          alt={event.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      
+                      {/* Decorative Elements */}
+                      <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-500 rounded-full opacity-60"></div>
+                      <div className="absolute top-1/2 -left-8 w-4 h-4 bg-red-500 rounded-full opacity-60"></div>
                     </div>
-                    
-                    {/* Decorative Elements */}
-                    <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-500 rounded-full opacity-60"></div>
-                    <div className="absolute top-1/2 -left-8 w-4 h-4 bg-red-500 rounded-full opacity-60"></div>
-                  </div>
+                  </ScrollSection>
                 </div>
               </div>
             </div>

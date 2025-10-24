@@ -36,7 +36,7 @@ export default function Loading() {
             <img 
               src="/images/ONIX GROUP 0002.png" 
               alt="ONIX Logo" 
-              className="w-16 h-16 object-contain animate-spin"
+              className="w-20 h-20 object-contain animate-spin"
             />
           </div>
         </div>

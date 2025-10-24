@@ -28,8 +28,13 @@ export default function Services() {
 
   return (
     <>
-    <section id="services" className="py-12 sm:py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-12 sm:py-20 relative overflow-hidden min-h-screen flex flex-col justify-start">
+      {/* Construction Background for Services - Full Fit */}
+      <div className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat brightness-50 contrast-125" style={{ backgroundImage: 'url(/images/01.jpg)' }}>
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/90 to-transparent"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-8 sm:pt-16 pb-16 sm:pb-20">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 uppercase tracking-wide">Our Services</h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">

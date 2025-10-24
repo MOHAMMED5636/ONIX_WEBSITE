@@ -55,62 +55,66 @@ export default function About() {
   return (
     <>
       {/* Who We Are Section */}
-      <section id="about" className="py-12 sm:py-24 relative overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/5 to-transparent"></div>
-          <div className="absolute bottom-0 right-0 w-48 sm:w-96 h-48 sm:h-96 bg-gradient-to-tl from-white/5 to-transparent rounded-full"></div>
+      <section id="about" className="py-12 sm:py-24 relative overflow-hidden min-h-screen flex flex-col justify-start">
+        {/* Planet Background - Positioned much lower */}
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-1/2 flex items-end justify-center">
+          <div className="relative w-full h-full max-w-7xl max-h-7xl">
+            <img 
+              src="/images/planet_06f7a40c8b.webp" 
+              alt="Global Network - ONIX Group Worldwide Presence" 
+              className="w-full h-full object-contain opacity-30"
+            />
+          </div>
         </div>
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Section Header */}
-          <div className="text-center mb-12 sm:mb-20">
-            <div className="inline-block bg-white/10 backdrop-blur-sm rounded-full px-4 sm:px-6 py-2 mb-4 sm:mb-6">
-              <span className="text-xs sm:text-sm font-medium text-white uppercase tracking-wider">Who We Are</span>
-            </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 uppercase tracking-wide">
-              Onix Group of Companies
-            </h2>
-            <div className="w-16 sm:w-24 h-1 bg-white mx-auto"></div>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-6 sm:space-y-8">
-              {/* Main Content */}
-              <div className="space-y-4 sm:space-y-6 text-center">
-                <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed">
-                  With over a decade of experience, Onix Group of Companies delivers innovative solutions.<br />
-                  Our diverse portfolio serves clients across engineering, technology, and construction.<br />
-                  We are committed to quality, excellence, and exceeding expectations.
-                </p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-30 w-full pt-8 sm:pt-16 pb-16 sm:pb-20">
+          {/* Content positioned clearly above the planet */}
+          <div className="text-center">
+            {/* Header positioned in upper area */}
+            <div className="mb-8 sm:mb-12">
+              <div className="inline-block bg-white/40 backdrop-blur-sm rounded-full px-6 sm:px-8 py-3 mb-6 sm:mb-8 shadow-2xl">
+                <span className="text-sm sm:text-base font-medium text-white uppercase tracking-wider">Who We Are</span>
               </div>
-              
-              {/* Statistics Grid */}
-              <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 pt-6 sm:pt-8 border-t border-white/20">
-                <div className="text-center group">
-                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2 group-hover:text-white/80 transition-colors duration-300">
-                    <AnimatedNumber end={500} suffix="+" duration={2500} />
-                  </div>
-                  <div className="text-gray-400 font-medium uppercase tracking-wide text-xs sm:text-sm">Projects Completed</div>
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 sm:mb-8 uppercase tracking-wide drop-shadow-2xl">
+                Onix Group of Companies
+              </h2>
+              <div className="w-24 sm:w-40 h-1 bg-white mx-auto shadow-lg"></div>
+            </div>
+
+            {/* Main content positioned above the planet */}
+            <div className="max-w-6xl mx-auto mb-12 sm:mb-16">
+              <p className="text-xl sm:text-2xl md:text-3xl text-white leading-relaxed drop-shadow-2xl font-semibold">
+                With over a decade of experience, Onix Group of Companies delivers innovative solutions.<br />
+                Our diverse portfolio serves clients across engineering, technology, and construction.<br />
+                We are committed to quality, excellence, and exceeding expectations.
+              </p>
+            </div>
+            
+            {/* Statistics positioned above the planet */}
+            <div className="grid grid-cols-2 gap-8 sm:gap-12 md:gap-16 max-w-5xl mx-auto">
+              <div className="text-center group">
+                <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-3 sm:mb-4 group-hover:text-white/90 transition-colors duration-300 drop-shadow-2xl">
+                  <AnimatedNumber end={500} suffix="+" duration={2500} />
                 </div>
-                <div className="text-center group">
-                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2 group-hover:text-white/80 transition-colors duration-300">
-                    <AnimatedNumber end={15} suffix="+" duration={2000} />
-                  </div>
-                  <div className="text-gray-400 font-medium uppercase tracking-wide text-xs sm:text-sm">Years Experience</div>
+                <div className="text-white/90 font-semibold uppercase tracking-wide text-base sm:text-lg drop-shadow-lg">Projects Completed</div>
+              </div>
+              <div className="text-center group">
+                <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-3 sm:mb-4 group-hover:text-white/90 transition-colors duration-300 drop-shadow-2xl">
+                  <AnimatedNumber end={15} suffix="+" duration={2000} />
                 </div>
-                <div className="text-center group">
-                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2 group-hover:text-white/80 transition-colors duration-300">
-                    <AnimatedNumber end={10} suffix="+" duration={1500} />
-                  </div>
-                  <div className="text-gray-400 font-medium uppercase tracking-wide text-xs sm:text-sm">Companies</div>
+                <div className="text-white/90 font-semibold uppercase tracking-wide text-base sm:text-lg drop-shadow-lg">Years Experience</div>
+              </div>
+              <div className="text-center group">
+                <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-3 sm:mb-4 group-hover:text-white/90 transition-colors duration-300 drop-shadow-2xl">
+                  <AnimatedNumber end={10} suffix="+" duration={1500} />
                 </div>
-                <div className="text-center group">
-                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2 group-hover:text-white/80 transition-colors duration-300">
-                    <AnimatedNumber end={100} suffix="%" duration={2000} />
-                  </div>
-                  <div className="text-gray-400 font-medium uppercase tracking-wide text-xs sm:text-sm">Client Satisfaction</div>
+                <div className="text-white/90 font-semibold uppercase tracking-wide text-base sm:text-lg drop-shadow-lg">Companies</div>
+              </div>
+              <div className="text-center group">
+                <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-3 sm:mb-4 group-hover:text-white/90 transition-colors duration-300 drop-shadow-2xl">
+                  <AnimatedNumber end={100} suffix="%" duration={2000} />
                 </div>
+                <div className="text-white/90 font-semibold uppercase tracking-wide text-base sm:text-lg drop-shadow-lg">Client Satisfaction</div>
               </div>
             </div>
           </div>
@@ -118,8 +122,22 @@ export default function About() {
       </section>
 
       {/* Leadership Section */}
-      <section id="leadership" className="py-12 sm:py-24 relative overflow-hidden bg-gray-900/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section id="leadership" className="py-12 sm:py-24 relative overflow-hidden min-h-screen flex flex-col justify-start">
+        {/* Construction Video Background for Leadership - Full Fit */}
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src="/images/construction-video.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-8 sm:pt-16 pb-16 sm:pb-20">
           <div className="text-center mb-12 sm:mb-20">
             <div className="inline-block bg-white/10 backdrop-blur-sm rounded-full px-4 sm:px-6 py-2 mb-4 sm:mb-6">
               <span className="text-xs sm:text-sm font-medium text-white uppercase tracking-wider">Leadership</span>
@@ -143,8 +161,13 @@ export default function About() {
       </section>
 
       {/* Sustainability Section */}
-      <section id="sustainability" className="py-12 sm:py-24 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section id="sustainability" className="py-12 sm:py-24 relative overflow-hidden min-h-screen flex flex-col justify-start">
+        {/* Construction Background for Sustainability - Full Fit */}
+        <div className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat sepia-20" style={{ backgroundImage: 'url(/images/01.jpg)' }}>
+          <div className="absolute inset-0 bg-gradient-to-t from-blue-900/70 via-gray-900/70 to-transparent"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-8 sm:pt-16 pb-16 sm:pb-20">
           <div className="text-center mb-12 sm:mb-20">
             <div className="inline-block bg-white/10 backdrop-blur-sm rounded-full px-4 sm:px-6 py-2 mb-4 sm:mb-6">
               <span className="text-xs sm:text-sm font-medium text-white uppercase tracking-wider">Sustainability</span>

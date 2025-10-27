@@ -30,13 +30,13 @@ export default function Hero() {
       {/* Hero Section */}
       <section className="hero-fullscreen relative">
         {/* ONIX Logo - Top left */}
-        <div className="absolute -top-16 left-4 sm:-top-20 sm:left-8 z-10">
+        <div className="absolute -top-8 left-2 sm:-top-12 sm:left-4 md:-top-16 md:left-6 lg:-top-20 lg:left-8 z-10">
           <div className="flex items-center space-x-2 sm:space-x-3">
             {/* ONIX GROUP Logo */}
             <img 
               src="/images/ONIX GROUP 0002.png" 
               alt="ONIX Logo" 
-              className="w-64 h-64 sm:w-72 sm:h-72 object-contain"
+              className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 object-contain"
               key="onix-logo-colorful"
             />
             <div className="flex flex-col">
@@ -45,9 +45,46 @@ export default function Hero() {
         </div>
 
         {/* Navigation Links - Top right */}
-        <div className="absolute top-4 right-4 sm:top-8 sm:right-8 z-50">
+        <div className="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 z-50">
+          {/* Tablet Navigation - Simplified */}
+          <nav className="hidden md:flex lg:hidden items-center space-x-4">
+            <button 
+              className="text-white hover:text-blue-400 font-medium transition-all duration-300 text-xs uppercase tracking-wide cursor-pointer relative group bg-transparent border-none"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              ABOUT
+            </button>
+            <Link 
+              href="/companies"
+              className="text-white hover:text-blue-400 font-medium transition-all duration-300 text-xs uppercase tracking-wide cursor-pointer relative group"
+            >
+              COMPANIES
+            </Link>
+            <button 
+              className="text-white hover:text-blue-400 font-medium transition-all duration-300 text-xs uppercase tracking-wide cursor-pointer relative group bg-transparent border-none"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              PORTFOLIO
+            </button>
+            <button 
+              className="text-white hover:text-blue-400 font-medium transition-all duration-300 text-xs uppercase tracking-wide cursor-pointer relative group bg-transparent border-none"
+              onClick={(e) => {
+                e.preventDefault();
+                router.push('/legacy');
+              }}
+            >
+              LEGACY
+            </button>
+          </nav>
+
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
+          <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {/* About with Dropdown */}
             <div 
               className="relative"
@@ -174,7 +211,7 @@ export default function Hero() {
           </nav>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden relative z-50 mobile-menu-container">
+          <div className="lg:hidden relative z-50 mobile-menu-container">
             <button 
               onClick={(e) => {
                 e.preventDefault();
@@ -195,12 +232,12 @@ export default function Hero() {
             <>
               {/* Backdrop */}
               <div 
-                className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-40"
+                className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-40"
                 onClick={() => setShowMobileMenu(false)}
               ></div>
               
               {/* Minimalistic Slide-in Menu */}
-              <div className="md:hidden fixed top-0 right-0 h-full w-72 bg-black/95 backdrop-blur-sm z-50 mobile-menu-container transform transition-all duration-300 ease-out border-l border-gray-800">
+              <div className="lg:hidden fixed top-0 right-0 h-full w-80 md:w-96 bg-black/95 backdrop-blur-sm z-50 mobile-menu-container transform transition-all duration-300 ease-out border-l border-gray-800">
                 <div className="p-8 h-full flex flex-col">
                   {/* Minimal Header with Logo */}
                   <div className="flex items-center justify-between mb-12">
@@ -343,19 +380,19 @@ export default function Hero() {
         </div>
         
         {/* Hero Content - Bottom Left like STUDIA 54 */}
-        <div className="absolute bottom-0 left-0 z-10 p-8 lg:p-12">
-          <div className="max-w-3xl">
+        <div className="absolute bottom-0 left-0 z-10 p-4 sm:p-6 md:p-8 lg:p-12">
+          <div className="max-w-2xl md:max-w-3xl lg:max-w-4xl">
             {/* Main Title */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-white mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-white mb-4 sm:mb-6 leading-tight">
               EXPECT MORE. Achieve BEYOND
             </h1>
             
             {/* Subtitle */}
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 font-light">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-6 sm:mb-8 font-light">
             </p>
             
             {/* Explore Button like Al Shirawi */}
-            <Link href="/explore" className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-medium text-sm uppercase tracking-wide hover:bg-white hover:text-gray-900 transition-all duration-300 rounded-none">
+            <Link href="/explore" className="inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 border-2 border-white text-white font-medium text-xs sm:text-sm uppercase tracking-wide hover:bg-white hover:text-gray-900 transition-all duration-300 rounded-none">
               EXPLORE
             </Link>
           </div>

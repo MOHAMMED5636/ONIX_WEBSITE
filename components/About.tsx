@@ -163,7 +163,7 @@ export default function About() {
       {/* Sustainability Section */}
       <section id="sustainability" className="py-12 sm:py-24 relative overflow-hidden min-h-screen flex flex-col justify-start">
         {/* Construction Background for Sustainability - Full Fit */}
-        <div className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat sepia-20" style={{ backgroundImage: 'url(/images/01.jpg)' }}>
+        <div className="absolute inset-0 w-full h-full bg-gray-900">
           <div className="absolute inset-0 bg-gradient-to-t from-blue-900/70 via-gray-900/70 to-transparent"></div>
         </div>
         

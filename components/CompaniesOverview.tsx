@@ -17,26 +17,30 @@ export default function CompaniesOverview() {
 
   if (isLoading) {
     return (
-      <div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 flex items-center justify-center z-50">
-        {/* Loading Screen with Onix Logo */}
-        <div className="text-center">
-          {/* Onix Logo Animation */}
-          <div className="mb-8 animate-pulse">
+      <div className="fixed inset-0 bg-black z-[9999] flex items-center justify-center">
+        {/* ONIX GROUP LOADING Video */}
+        <video
+          className="w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          webkit-playsinline="true"
+          x5-video-player-type="h5"
+          x5-video-player-fullscreen="true"
+          x5-video-orientation="portraint"
+        >
+          <source src="/images/ONIX GROUP LOADING.mp4" type="video/mp4" />
+          {/* Fallback for browsers that don't support video */}
+          <div className="flex items-center justify-center h-full">
             <img 
               src="/images/ONIX GROUP 0002.png" 
-              alt="ONIX Logo" 
-              className="w-48 h-48 object-contain mx-auto"
+              alt="ONIX GROUP Loading" 
+              className="w-32 h-32 object-contain animate-pulse"
             />
           </div>
-          
-          
-          {/* Loading dots */}
-          <div className="flex justify-center items-center space-x-2 mt-8">
-            <div className="w-3 h-3 bg-white rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
-            <div className="w-3 h-3 bg-white rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
-            <div className="w-3 h-3 bg-white rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
-          </div>
-        </div>
+        </video>
       </div>
     )
   }
@@ -58,16 +62,13 @@ export default function CompaniesOverview() {
         <div className="absolute inset-0 bg-black/30"></div>
       </div>
 
-      {/* Onix Logo - Top Left - Clickable */}
-      <div className="absolute -top-16 left-8 sm:-top-20 z-50">
-        <Link href="/" className="flex items-center hover:opacity-80 transition-opacity duration-300 cursor-pointer">
-          <img 
-            src="/images/ONIX GROUP 0002.png" 
-            alt="ONIX Logo" 
-            className="w-64 h-64 sm:w-72 sm:h-72 object-contain mr-4"
-          />
-          <div>
-          </div>
+      {/* Back Button */}
+      <div className="fixed top-8 left-8 z-50 relative">
+        <Link href="/" className="inline-flex items-center text-white hover:text-blue-400 transition-colors duration-300">
+          <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+          <span className="text-sm uppercase tracking-wide">Back</span>
         </Link>
       </div>
 
@@ -78,37 +79,43 @@ export default function CompaniesOverview() {
         <div className="relative z-10 min-h-screen flex flex-col justify-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Main Title - Enhanced with Animation */}
-            <div className="text-center mb-12 sm:mb-16 px-4">
+            <div className="text-center mb-8 sm:mb-12 md:mb-16 px-2 sm:px-4">
               <div className="relative">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 uppercase tracking-wide animate-fade-in-up leading-tight">
+                <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-3 sm:mb-4 uppercase tracking-wide animate-fade-in-up leading-tight">
                   EXPLORE OUR COMPANIES
                 </h1>
+                {/* ONIX GROUP Subtitle */}
+                <div className="mb-4 sm:mb-6">
+                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white">
+                    <span className="text-red-500">ONIX</span> <span className="underline">GROUP</span>
+                  </h2>
+                </div>
                 {/* Decorative Line */}
-                <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-transparent via-white to-transparent mx-auto mb-6 sm:mb-8 animate-pulse"></div>
+                <div className="w-12 sm:w-16 md:w-24 h-1 bg-gradient-to-r from-transparent via-white to-transparent mx-auto mb-4 sm:mb-6 md:mb-8 animate-pulse"></div>
               </div>
             </div>
 
             {/* Search Section - Enhanced Design */}
-            <div className="max-w-5xl mx-auto mb-16 px-4 sm:px-0">
-              <div className="bg-white/15 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-white/30 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105">
-                <div className="text-center mb-6 sm:mb-8">
-                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">Find Your Perfect Solution</h3>
-                  <p className="text-sm sm:text-base text-gray-300">Filter our companies by industry, product, and service</p>
+            <div className="max-w-5xl mx-auto mb-12 sm:mb-16 px-2 sm:px-4">
+              <div className="bg-white/15 backdrop-blur-md rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 border border-white/30 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105">
+                <div className="text-center mb-4 sm:mb-6 md:mb-8">
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white mb-2">Find Your Perfect Solution</h3>
+                  <p className="text-xs sm:text-sm md:text-base text-gray-300">Filter our companies by industry, product, and service</p>
                 </div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 mb-4 sm:mb-6 md:mb-8">
                   {/* Select Industry */}
                   <div className="relative group">
-                    <label className="block text-sm font-medium text-white mb-2">Industry</label>
-                    <select className="w-full bg-white/25 border border-white/40 rounded-xl px-4 py-3 sm:py-4 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-300 hover:bg-white/30 text-sm sm:text-base">
+                    <label className="block text-xs sm:text-sm font-medium text-white mb-1 sm:mb-2">Industry</label>
+                    <select className="w-full bg-white/25 border border-white/40 rounded-lg sm:rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 md:py-4 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-300 hover:bg-white/30 text-xs sm:text-sm md:text-base">
                       <option value="" className="text-gray-900">Select Industry</option>
                       <option value="engineering" className="text-gray-900">Engineering</option>
                       <option value="construction" className="text-gray-900">Construction</option>
                       <option value="design" className="text-gray-900">Design</option>
                       <option value="consulting" className="text-gray-900">Consulting</option>
                     </select>
-                    <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                      <svg className="w-5 h-5 text-white group-hover:text-blue-300 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="absolute right-3 sm:right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                      <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:text-blue-300 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </div>
@@ -116,33 +123,33 @@ export default function CompaniesOverview() {
 
                   {/* Select Product */}
                   <div className="relative group">
-                    <label className="block text-sm font-medium text-white mb-2">Product</label>
-                    <select className="w-full bg-white/25 border border-white/40 rounded-xl px-4 py-3 sm:py-4 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-300 hover:bg-white/30 text-sm sm:text-base">
+                    <label className="block text-xs sm:text-sm font-medium text-white mb-1 sm:mb-2">Product</label>
+                    <select className="w-full bg-white/25 border border-white/40 rounded-lg sm:rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 md:py-4 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-300 hover:bg-white/30 text-xs sm:text-sm md:text-base">
                       <option value="" className="text-gray-900">Select Product</option>
                       <option value="structural" className="text-gray-900">Structural Design</option>
                       <option value="mep" className="text-gray-900">MEP Systems</option>
                       <option value="interior" className="text-gray-900">Interior Design</option>
                       <option value="consulting" className="text-gray-900">Consulting Services</option>
                     </select>
-                    <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                      <svg className="w-5 h-5 text-white group-hover:text-blue-300 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="absolute right-3 sm:right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                      <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:text-blue-300 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </div>
                   </div>
 
                   {/* Select Service */}
-                  <div className="relative group">
-                    <label className="block text-sm font-medium text-white mb-2">Service</label>
-                    <select className="w-full bg-white/25 border border-white/40 rounded-xl px-4 py-3 sm:py-4 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-300 hover:bg-white/30 text-sm sm:text-base">
+                  <div className="relative group sm:col-span-2 lg:col-span-1">
+                    <label className="block text-xs sm:text-sm font-medium text-white mb-1 sm:mb-2">Service</label>
+                    <select className="w-full bg-white/25 border border-white/40 rounded-lg sm:rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 md:py-4 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-300 hover:bg-white/30 text-xs sm:text-sm md:text-base">
                       <option value="" className="text-gray-900">Select Service</option>
                       <option value="design" className="text-gray-900">Design Services</option>
                       <option value="construction" className="text-gray-900">Construction</option>
                       <option value="management" className="text-gray-900">Project Management</option>
                       <option value="maintenance" className="text-gray-900">Maintenance</option>
                     </select>
-                    <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                      <svg className="w-5 h-5 text-white group-hover:text-blue-300 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="absolute right-3 sm:right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                      <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:text-blue-300 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </div>
@@ -151,21 +158,21 @@ export default function CompaniesOverview() {
 
                 {/* Enhanced Search Button */}
                 <div className="text-center">
-                  <button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 sm:px-12 py-3 sm:py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl flex items-center justify-center mx-auto text-sm sm:text-base w-full sm:w-auto">
-                    <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 sm:px-8 md:px-12 py-2.5 sm:py-3 md:py-4 rounded-lg sm:rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl flex items-center justify-center mx-auto text-xs sm:text-sm md:text-base w-full sm:w-auto">
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 mr-1.5 sm:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
                     <span className="hidden sm:inline">SEARCH COMPANIES</span>
-                    <span className="sm:hidden">SEARCH</span>
+                    <span className="sm:hidden">Q SEARCH</span>
                   </button>
                 </div>
               </div>
             </div>
 
             {/* Enhanced Download Brochure Button */}
-            <div className="text-center mb-16 px-4">
-              <button className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white border-2 border-white/50 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl group text-sm sm:text-base">
-                <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="text-center mb-12 sm:mb-16 px-2 sm:px-4">
+              <button className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white border-2 border-white/50 px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-lg sm:rounded-xl font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl group text-xs sm:text-sm md:text-base">
+                <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 mr-1.5 sm:mr-2 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
                 <span className="hidden sm:inline">Download Brochure</span>

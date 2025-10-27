@@ -69,26 +69,30 @@ export default function Leaders() {
 
   if (isLoading) {
     return (
-      <div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 flex items-center justify-center z-50">
-        {/* Loading Screen with Onix Logo */}
-        <div className="text-center">
-          {/* Onix Logo Animation */}
-          <div className="mb-8 animate-pulse">
+      <div className="fixed inset-0 bg-black z-[9999] flex items-center justify-center">
+        {/* ONIX GROUP LOADING Video */}
+        <video
+          className="w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          webkit-playsinline="true"
+          x5-video-player-type="h5"
+          x5-video-player-fullscreen="true"
+          x5-video-orientation="portraint"
+        >
+          <source src="/images/ONIX GROUP LOADING.mp4" type="video/mp4" />
+          {/* Fallback for browsers that don't support video */}
+          <div className="flex items-center justify-center h-full">
             <img 
               src="/images/ONIX GROUP 0002.png" 
-              alt="ONIX Logo" 
-              className="w-48 h-48 object-contain mx-auto"
+              alt="ONIX GROUP Loading" 
+              className="w-32 h-32 object-contain animate-pulse"
             />
           </div>
-          
-          
-          {/* Loading dots */}
-          <div className="flex justify-center items-center space-x-2 mt-8">
-            <div className="w-3 h-3 bg-white rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
-            <div className="w-3 h-3 bg-white rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
-            <div className="w-3 h-3 bg-white rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
-          </div>
-        </div>
+        </video>
       </div>
     )
   }
@@ -125,7 +129,7 @@ export default function Leaders() {
           <img 
             src="/images/ONIX GROUP 0002.png" 
             alt="ONIX Logo" 
-            className="w-32 h-32 object-contain"
+            className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 object-contain"
           />
         </div>
       </div>
@@ -224,8 +228,10 @@ export default function Leaders() {
             Scroll to see all 70 team members across our companies
           </p>
         </div>
+      </div>
 
-        {/* Job Positions Section */}
+      {/* Job Positions Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center relative z-20">
         <div className="mt-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-6 text-center">KEY POSITIONS & PROFILES</h3>

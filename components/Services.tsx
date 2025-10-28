@@ -1,28 +1,34 @@
+import Link from 'next/link'
+
 export default function Services() {
   const services = [
     {
       title: 'Engineering Solutions',
       description: 'Comprehensive engineering services across structural, civil, and MEP disciplines.',
       icon: '🏗️',
-      features: ['Structural Design', 'Infrastructure Development', 'MEP Systems', 'Quality Assurance']
+      features: ['Structural Design', 'Infrastructure Development', 'MEP Systems', 'Quality Assurance'],
+      href: '/services/structural-engineering'
     },
     {
       title: 'Technology Services',
       description: 'Digital transformation and technology solutions for modern business challenges.',
       icon: '💻',
-      features: ['Software Development', 'Digital Solutions', 'IT Consulting', 'System Integration']
+      features: ['Software Development', 'Digital Solutions', 'IT Consulting', 'System Integration'],
+      href: '/services/mep-engineering'
     },
     {
       title: 'Construction Management',
       description: 'End-to-end construction project management ensuring timely delivery and quality standards.',
       icon: '🏢',
-      features: ['Project Planning', 'Quality Control', 'Cost Management', 'Timeline Coordination']
+      features: ['Project Planning', 'Quality Control', 'Cost Management', 'Timeline Coordination'],
+      href: '/services/project-management'
     },
     {
       title: 'Consulting Services',
       description: 'Strategic business consulting across multiple industries and sectors.',
       icon: '📊',
-      features: ['Business Strategy', 'Process Optimization', 'Market Analysis', 'Growth Planning']
+      features: ['Business Strategy', 'Process Optimization', 'Market Analysis', 'Growth Planning'],
+      href: '/services/consultation'
     }
   ]
 
@@ -44,19 +50,24 @@ export default function Services() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {services.map((service, index) => (
-            <div key={index} className="bg-gray-900 rounded-xl shadow-lg p-4 sm:p-6 hover:shadow-xl transition-shadow duration-300 border border-gray-700">
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">{service.icon}</div>
-              <h3 className="text-lg sm:text-xl font-semibold text-white mb-2 sm:mb-3">{service.title}</h3>
-              <p className="text-sm sm:text-base text-gray-300 mb-3 sm:mb-4">{service.description}</p>
-              <ul className="space-y-1 sm:space-y-2">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="text-xs sm:text-sm text-gray-400 flex items-center">
-                    <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full mr-2 sm:mr-3 flex-shrink-0"></span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <Link key={index} href={service.href} className="block group">
+              <div className="bg-gray-900 rounded-xl shadow-lg p-4 sm:p-6 hover:shadow-xl transition-all duration-300 border border-gray-700 group-hover:border-blue-500 group-hover:scale-105 cursor-pointer">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-2 sm:mb-3 group-hover:text-blue-400 transition-colors duration-300">{service.title}</h3>
+                <p className="text-sm sm:text-base text-gray-300 mb-3 sm:mb-4 group-hover:text-gray-200 transition-colors duration-300">{service.description}</p>
+                <ul className="space-y-1 sm:space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="text-xs sm:text-sm text-gray-400 flex items-center group-hover:text-gray-300 transition-colors duration-300">
+                      <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full mr-2 sm:mr-3 flex-shrink-0 group-hover:bg-blue-400 transition-colors duration-300"></span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-4 text-blue-400 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  Learn More →
+                </div>
+              </div>
+            </Link>
           ))}
         </div>
       </div>

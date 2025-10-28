@@ -90,7 +90,7 @@ export default function ExplorePage() {
                 setVideoError(true)
               }}
             >
-              <source src="/images/construction-video.mp4" type="video/mp4" />
+              <source src="/videos/construction-video.mp4" type="video/mp4" />
             </video>
           ) : (
             <div 

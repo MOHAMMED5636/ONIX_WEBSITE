@@ -372,7 +372,7 @@ export default function Hero() {
             playsInline
             preload="auto"
           >
-            <source src="/images/construction-video.mp4" type="video/mp4" />
+            <source src="/videos/construction-video.mp4" type="video/mp4" />
           </video>
           
           {/* Subtle overlay for better text readability */}

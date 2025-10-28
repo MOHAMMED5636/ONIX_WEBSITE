@@ -132,7 +132,7 @@ export default function About() {
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src="/images/construction-video.mp4" type="video/mp4" />
+            <source src="/videos/construction-video.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent"></div>
         </div>

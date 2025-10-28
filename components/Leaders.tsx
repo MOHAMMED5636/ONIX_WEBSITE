@@ -72,7 +72,7 @@ export default function Leaders() {
       <div className="fixed inset-0 bg-black z-[9999] flex items-center justify-center">
         {/* ONIX GROUP LOADING Video */}
         <video
-          className="w-full h-full object-cover"
+          className="object-contain w-[260px] sm:w-[320px] md:w-[420px] lg:w-[520px] xl:w-[600px] h-auto"
           autoPlay
           muted
           loop
@@ -83,13 +83,13 @@ export default function Leaders() {
           x5-video-player-fullscreen="true"
           x5-video-orientation="portraint"
         >
-          <source src="/images/ONIX GROUP LOADING.mp4" type="video/mp4" />
+          <source src="/videos/ONIX GROUP LOADING.mp4" type="video/mp4" />
           {/* Fallback for browsers that don't support video */}
           <div className="flex items-center justify-center h-full">
             <img 
               src="/images/ONIX GROUP 0002.png" 
               alt="ONIX GROUP Loading" 
-              className="w-32 h-32 object-contain animate-pulse"
+              className="object-contain animate-pulse w-[120px] sm:w-[160px] md:w-[200px] lg:w-[240px] h-auto"
             />
           </div>
         </video>
@@ -109,7 +109,7 @@ export default function Leaders() {
           playsInline
           preload="auto"
         >
-          <source src="/images/construction-video.mp4" type="video/mp4" />
+          <source src="/videos/construction-video.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black/40"></div>
       </div>

@@ -15,18 +15,18 @@ export default function Companies() {
       color: 'from-blue-600 to-blue-800'
     },
     {
-      name: 'ONIX PLUS',
-      description: 'Professional contracting company delivering construction and project management excellence.',
+      name: 'ONIX PRIME',
+      description: 'Professional accounting and tax consultancy services providing comprehensive financial solutions.',
       services: [
-        'General Contracting',
-        'Construction Management',
-        'Project Coordination',
-        'Site Supervision',
-        'Cost Management',
-        'Timeline Control'
+        'Tax Consultancy',
+        'Financial Planning',
+        'Accounting Services',
+        'Audit Services',
+        'Business Advisory',
+        'Compliance Management'
       ],
       icon: '',
-      color: 'from-green-600 to-green-800'
+      color: 'from-purple-600 to-purple-800'
     },
     {
       name: 'ONIX DESIGN STUDIO',
@@ -43,18 +43,18 @@ export default function Companies() {
       color: 'from-pink-600 to-pink-800'
     },
     {
-      name: 'ONIX PRIME',
-      description: 'Professional accounting and tax consultancy services providing comprehensive financial solutions.',
+      name: 'ONIX PLUS',
+      description: 'Professional contracting company delivering construction and project management excellence.',
       services: [
-        'Tax Consultancy',
-        'Financial Planning',
-        'Accounting Services',
-        'Audit Services',
-        'Business Advisory',
-        'Compliance Management'
+        'General Contracting',
+        'Construction Management',
+        'Project Coordination',
+        'Site Supervision',
+        'Cost Management',
+        'Timeline Control'
       ],
       icon: '',
-      color: 'from-purple-600 to-purple-800'
+      color: 'from-green-600 to-green-800'
     },
     {
       name: 'CRIMSON',

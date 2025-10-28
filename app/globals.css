@@ -2,7 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@font-face {
+  font-family: 'Berlin Sans FB';
+  src: url('/fonts/BRLNSR.TTF') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 html {
   scroll-behavior: smooth;
@@ -11,7 +17,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Berlin Sans FB', system-ui, sans-serif;
   background-color: #000000;
   color: #ffffff;
   margin: 0;
@@ -108,4 +114,64 @@ header {
 
 .dark-section .text-gray-700 {
   color: #d1d5db !important;
+}
+
+/* --- Card Animations (Services) --- */
+.card-animate {
+  position: relative;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 500ms ease, transform 500ms ease, box-shadow 300ms ease, filter 300ms ease;
+}
+.card-animate.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card-animate:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.06) inset;
+}
+.card-animate .card-icon {
+  transition: transform 250ms ease;
+}
+.card-animate:hover .card-icon {
+  transform: scale(1.12);
+}
+
+/* Subtle animated blob background behind card */
+.card-blob {
+  position: absolute;
+  inset: -40%;
+  pointer-events: none;
+  background: radial-gradient(45% 45% at 30% 30%, rgba(59,130,246,0.16) 0%, rgba(59,130,246,0.06) 35%, transparent 60%),
+              radial-gradient(40% 40% at 70% 70%, rgba(236,72,153,0.12) 0%, rgba(236,72,153,0.06) 40%, transparent 65%);
+  filter: blur(26px) saturate(120%);
+  animation: float-blob 12s ease-in-out infinite;
+}
+@keyframes float-blob {
+  0%, 100% { transform: translate3d(0,0,0) scale(1); }
+  50% { transform: translate3d(8px,-10px,0) scale(1.05); }
+}
+
+/* Ripple effect */
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+.ripple-circle {
+  position: absolute;
+  border-radius: 9999px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  background: rgba(255,255,255,0.35);
+  animation: ripple-fade 600ms ease-out forwards;
+}
+@keyframes ripple-fade {
+  from { width: 0; height: 0; opacity: .65; }
+  to { width: 280px; height: 280px; opacity: 0; }
+}
+
+/* Optional count-up number styling */
+.count-up {
+  font-variant-numeric: tabular-nums;
 }

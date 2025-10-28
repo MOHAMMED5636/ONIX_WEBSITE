@@ -26,7 +26,8 @@ module.exports = {
         }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Berlin Sans FB', 'system-ui', 'sans-serif'],
+        'berlin-sans': ['Berlin Sans FB', 'system-ui', 'sans-serif'],
       },
     },
   },

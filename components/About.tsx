@@ -148,13 +148,99 @@ export default function About() {
             <div className="w-16 sm:w-24 h-1 bg-white mx-auto"></div>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-6 sm:space-y-8 text-center">
+          <div className="max-w-6xl mx-auto">
+            <div className="space-y-6 sm:space-y-8 text-center mb-12">
               <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed">
                 Our leadership team brings together decades of experience across engineering and construction.<br />
                 Each leader is committed to driving innovation and delivering exceptional results.<br />
                 Under their guidance, Onix Group has grown into a diversified conglomerate with excellence.
               </p>
+            </div>
+
+            {/* Leadership Team Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+              {[
+                {
+                  name: 'Ahmed Al Kaddour',
+                  title: 'Chief Operating Officer',
+                  description: 'With a strategic mindset and exceptional operational expertise, Ahmed has driven the company\'s growth across multiple sectors, ensuring excellence in every project undertaken.',
+                  image: '/images/ahmed al kaddour.png',
+                  achievements: [
+                    'Optimized operational efficiency by 40%',
+                    'Managed over 200 successful projects',
+                    'Developed innovative project management systems'
+                  ]
+                },
+                {
+                  name: 'Rameez Kaddour',
+                  title: 'Chief Executive Officer',
+                  description: 'A visionary leader with over 25 years of experience in engineering and construction, Rameez has been instrumental in shaping Onix Group into a powerhouse of innovation and excellence.',
+                  image: '/images/rameez-kaddour.png',
+                  achievements: [
+                    'Led company growth from startup to industry leader',
+                    'Pioneered sustainable construction practices',
+                    'Established international partnerships'
+                  ]
+                },
+                {
+                  name: 'Kaddour Al Kaddour',
+                  title: 'Founding Chairman',
+                  description: 'The visionary founder who laid the foundation of Onix Group, Kaddour\'s entrepreneurial spirit and unwavering commitment to quality have been the cornerstone of our success story.',
+                  image: '/images/kaddour.png',
+                  achievements: [
+                    'Founded Onix Group in 1995',
+                    'Established company values and culture',
+                    'Mentored next generation of leaders'
+                  ]
+                },
+                {
+                  name: 'Nabil Al Kaddour',
+                  title: 'Chief Financial Officer',
+                  description: 'A financial strategist par excellence, Nabil has steered the company through dynamic market conditions with prudent fiscal management and forward-thinking investment strategies.',
+                  image: '/images/nabil.png',
+                  achievements: [
+                    'Maintained financial stability through market cycles',
+                    'Secured major funding for expansion',
+                    'Implemented advanced financial systems'
+                  ]
+                }
+              ].map((leader, index) => (
+                <div key={index} className="group">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                    {/* Leader Photo */}
+                    <div className="mb-4">
+                      <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-white/30 shadow-xl">
+                        <img 
+                          src={leader.image} 
+                          alt={leader.name}
+                          className="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-500"
+                          style={{ objectPosition: index === 0 ? '50% 20%' : index === 1 ? '50% 10%' : index === 2 ? '50% 20%' : index === 3 ? '50% 20%' : '50% 50%' }}
+                        />
+                      </div>
+                    </div>
+
+                    {/* Leader Info */}
+                    <div className="text-center">
+                      <h3 className="text-xl font-bold text-white mb-1">{leader.name}</h3>
+                      <p className="text-sm text-blue-300 mb-3 font-medium">{leader.title}</p>
+                      <p className="text-gray-300 leading-relaxed mb-4 text-sm">{leader.description}</p>
+                      
+                      {/* Achievements */}
+                      <div className="mb-4">
+                        <h4 className="text-sm font-semibold text-white mb-2">Key Achievements:</h4>
+                        <ul className="text-xs text-gray-300 space-y-1">
+                          {leader.achievements.map((achievement, idx) => (
+                            <li key={idx} className="flex items-start">
+                              <span className="text-blue-400 mr-2">•</span>
+                              <span>{achievement}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

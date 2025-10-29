@@ -188,47 +188,6 @@ export default function Leaders() {
         </div>
       </div>
 
-      {/* Team Information */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center relative z-20">
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8">
-          <h3 className="text-2xl font-bold text-white mb-4">OUR TEAM OF 70 PEOPLE</h3>
-          <p className="text-gray-300 mb-4">
-            Dedicated professionals working across all our companies
-          </p>
-          <p className="text-sm text-gray-400">
-            From engineers and designers to project managers and support staff, our diverse team brings together decades of combined experience to deliver exceptional results.
-          </p>
-        </div>
-
-        {/* Team Members Grid */}
-        <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-8 gap-4 lg:gap-6">
-          {Array.from({ length: 70 }, (_, index) => (
-            <div key={index} className="group">
-              <div 
-                className={`w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 mx-auto rounded-full overflow-hidden border-2 border-white/30 shadow-lg hover:border-blue-400 transition-all duration-300 transform hover:scale-110 ${index === 0 ? 'cursor-pointer' : ''}`}
-                onClick={index === 0 ? () => setShowSamiProfile(true) : undefined}
-              >
-                <img 
-                  src={index === 0 ? '/images/SAMMY.png' : `https://images.unsplash.com/photo-${1500000000000 + index}?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80`}
-                  alt={index === 0 ? 'Sami Ibrahim' : `Team Member ${index + 1}`}
-                  className="w-full h-full object-cover object-top"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src = `https://ui-avatars.com/api/?name=${index === 0 ? 'Sami Ibrahim' : `TM${index + 1}`}&background=3b82f6&color=ffffff&size=150`;
-                  }}
-                />
-              </div>
-              <p className="text-xs text-gray-400 mt-1 hidden sm:block">{index === 0 ? 'Sami Ibrahim' : `TM${index + 1}`}</p>
-            </div>
-          ))}
-        </div>
-        
-        <div className="mt-8">
-          <p className="text-sm text-gray-400">
-            Scroll to see all 70 team members across our companies
-          </p>
-        </div>
-      </div>
 
       {/* Job Positions Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center relative z-20">

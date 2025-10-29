@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Onix Engineering Consultancy - Professional Engineering Solutions',
@@ -64,6 +65,7 @@ export default function RootLayout({
       </head>
       <body className="font-berlin-sans">
         {children}
+        <Footer />
       </body>
     </html>
   )

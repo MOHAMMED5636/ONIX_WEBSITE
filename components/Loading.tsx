@@ -26,10 +26,6 @@ export default function Loading() {
         loop
         playsInline
         preload="auto"
-        webkit-playsinline="true"
-        x5-video-player-type="h5"
-        x5-video-player-fullscreen="true"
-        x5-video-orientation="portraint"
       >
         <source src="/videos/ONIX GROUP LOADING.mp4" type="video/mp4" />
         {/* Fallback for browsers that don't support video */}

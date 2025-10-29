@@ -7,6 +7,8 @@ import { useRouter } from 'next/navigation'
 export default function Hero() {
   const router = useRouter()
   const [showMobileMenu, setShowMobileMenu] = useState(false)
+  const [showCompaniesDropdown, setShowCompaniesDropdown] = useState(false)
+  const [showMobileCompanies, setShowMobileCompanies] = useState(false)
 
   // Close dropdowns when clicking outside
   useEffect(() => {
@@ -14,6 +16,9 @@ export default function Hero() {
       const target = event.target as HTMLElement
       if (!target.closest('.mobile-menu-container')) {
         setShowMobileMenu(false)
+      }
+      if (!target.closest('.companies-dropdown-container')) {
+        setShowCompaniesDropdown(false)
       }
     }
 
@@ -66,12 +71,29 @@ export default function Hero() {
                     >
                       ABOUT
                     </button>
-                    <Link 
-                      href="/companies"
-                      className="text-white/90 hover:text-white font-medium transition-all duration-300 text-xs uppercase tracking-wide cursor-pointer relative group px-3 py-2 rounded-lg hover:bg-white/10"
-                    >
-                      COMPANIES
-                    </Link>
+                    <div className="relative companies-dropdown-container">
+                      <button
+                        className="text-white/90 hover:text-white font-medium transition-all duration-300 text-xs uppercase tracking-wide cursor-pointer relative group px-3 py-2 rounded-lg hover:bg-white/10 flex items-center gap-1"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          setShowCompaniesDropdown((v) => !v);
+                        }}
+                        aria-haspopup="menu"
+                        aria-expanded={showCompaniesDropdown}
+                      >
+                        COMPANIES
+                        <svg className={`w-3 h-3 transition-transform ${showCompaniesDropdown ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </button>
+                      {showCompaniesDropdown && (
+                        <div className="absolute right-0 mt-2 w-56 bg-black/70 backdrop-blur-md border border-white/10 rounded-lg shadow-xl z-[60] py-2">
+                          <Link href="/companies" className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors">Overview</Link>
+                          <Link href="/companies/list" className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors">All Companies</Link>
+                        </div>
+                      )}
+                    </div>
                     <button 
                       className="text-white/90 hover:text-white font-medium transition-all duration-300 text-xs uppercase tracking-wide cursor-pointer relative group bg-transparent border-none px-3 py-2 rounded-lg hover:bg-white/10"
                       onClick={(e) => {
@@ -107,15 +129,39 @@ export default function Hero() {
                       </span>
                     </button>
                     
-                    <Link 
-                      href="/companies"
-                      className="text-white/90 hover:text-white font-medium transition-all duration-300 text-sm uppercase tracking-wide cursor-pointer relative group px-3 py-2 rounded-lg hover:bg-white/10"
-                    >
-                      <span className="relative">
-                        COMPANIES
-                        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
-                      </span>
-                    </Link>
+                    <div className="relative companies-dropdown-container">
+                      <button
+                        className="text-white/90 hover:text-white font-medium transition-all duration-300 text-sm uppercase tracking-wide cursor-pointer relative group px-3 py-2 rounded-lg hover:bg-white/10 flex items-center gap-1"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          setShowCompaniesDropdown((v) => !v);
+                        }}
+                        aria-haspopup="menu"
+                        aria-expanded={showCompaniesDropdown}
+                      >
+                        <span className="relative">
+                          COMPANIES
+                          <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                        </span>
+                        <svg className={`w-3 h-3 transition-transform ${showCompaniesDropdown ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </button>
+                      {showCompaniesDropdown && (
+                        <div className="absolute right-0 mt-2 w-64 bg-black/70 backdrop-blur-md border border-white/10 rounded-lg shadow-xl z-[60] py-2">
+                          <Link href="/companies" className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors">Overview</Link>
+                          <Link href="/companies/list" className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors">All Companies</Link>
+                          <div className="my-2 h-px bg-white/10"></div>
+                          <span className="block px-4 py-2 text-white/60 text-xs uppercase tracking-wide">Highlighted</span>
+                          <Link href="/companies" className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors">Onix Engineering Consultancy</Link>
+                          <Link href="/companies" className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors">Onix Prime</Link>
+                          <Link href="/companies" className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors">Onix Design Studio</Link>
+                          <Link href="/companies" className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors">Onix Plus</Link>
+                          <Link href="/companies" className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors">Crimson</Link>
+                        </div>
+                      )}
+                    </div>
                     <button 
                       className="text-white/90 hover:text-white font-medium transition-all duration-300 text-sm uppercase tracking-wide cursor-pointer relative group bg-transparent border-none px-3 py-2 rounded-lg hover:bg-white/10"
                       onClick={(e) => {
@@ -166,8 +212,8 @@ export default function Hero() {
                     </button>
                     
                     {/* Search Icon */}
-                    <div className="w-6 h-6 text-white/90 hover:text-white cursor-pointer transition-colors duration-300 hover:scale-110 p-2 rounded-lg hover:bg-white/10">
-                      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="inline-flex items-center justify-center w-8 h-8 text-white/90 hover:text-white cursor-pointer transition-transform duration-300 hover:scale-110 rounded-lg hover:bg-white/10 align-middle">
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                       </svg>
                     </div>
@@ -241,13 +287,25 @@ export default function Hero() {
                       ABOUT
                     </button>
                     
-                    <Link 
-                      href="/companies"
-                      onClick={() => setShowMobileMenu(false)}
-                      className="w-full text-left py-4 px-4 text-white/90 hover:text-white transition-colors duration-200 rounded-lg hover:bg-white/10 border border-white/10 hover:border-white/20 block"
-                    >
-                      COMPANIES
-                    </Link>
+                    <div className="mobile-menu-container">
+                      <button
+                        onClick={() => setShowMobileCompanies((v) => !v)}
+                        className="w-full text-left py-4 px-4 text-white/90 hover:text-white transition-colors duration-200 rounded-lg hover:bg-white/10 border border-white/10 hover:border-white/20 flex items-center justify-between"
+                        aria-expanded={showMobileCompanies}
+                        aria-controls="mobile-companies-submenu"
+                      >
+                        <span>COMPANIES</span>
+                        <svg className={`w-4 h-4 transition-transform ${showMobileCompanies ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </button>
+                      {showMobileCompanies && (
+                        <div id="mobile-companies-submenu" className="mt-2 ml-2 space-y-2">
+                          <Link href="/companies" onClick={() => setShowMobileMenu(false)} className="block w-full text-left py-3 px-4 text-white/90 hover:text-white transition-colors rounded-lg hover:bg-white/10 border border-white/10">Overview</Link>
+                          <Link href="/companies/list" onClick={() => setShowMobileMenu(false)} className="block w-full text-left py-3 px-4 text-white/90 hover:text-white transition-colors rounded-lg hover:bg-white/10 border border-white/10">All Companies</Link>
+                        </div>
+                      )}
+                    </div>
                     
                     <button 
                       onClick={() => {

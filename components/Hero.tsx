@@ -40,22 +40,17 @@ export default function Hero() {
               <div className="flex items-center justify-between h-16 sm:h-20">
                 
                 {/* ONIX Logo - Left edge */}
-                <div className="flex items-center space-x-2 sm:space-x-3">
+                <div className="flex flex-col justify-center leading-tight gap-1">
+                  <span className="text-white/80 text-[10px] sm:text-xs md:text-sm font-light tracking-wider">
+                    ENGINEERING | CONSTRUCTION | TECHNOLOGY
+                  </span>
                   {/* ONIX GROUP Logo */}
                   <img 
                     src="/images/ONIX GROUP 0002.png" 
                     alt="ONIX Logo" 
-                    className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain"
+                    className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 object-contain"
                     key="onix-logo-colorful"
                   />
-                  <div className="flex flex-col">
-                    <span className="text-white font-bold text-lg sm:text-xl md:text-2xl tracking-wide">
-                      ONIX GROUP
-                    </span>
-                    <span className="text-white/80 text-xs sm:text-sm font-light tracking-wider">
-                      ENGINEERING | CONSTRUCTION | TECHNOLOGY
-                    </span>
-                  </div>
                 </div>
 
                 {/* Navigation Links - Right side */}
@@ -103,6 +98,12 @@ export default function Hero() {
                     >
                       PORTFOLIO
                     </button>
+                    <a 
+                      href="/careers"
+                      className="text-white/90 hover:text-white font-medium transition-all duration-300 text-xs uppercase tracking-wide cursor-pointer relative group px-3 py-2 rounded-lg hover:bg-white/10"
+                    >
+                      CAREERS
+                    </a>
                     <button 
                       className="text-white/90 hover:text-white font-medium transition-all duration-300 text-xs uppercase tracking-wide cursor-pointer relative group bg-transparent border-none px-3 py-2 rounded-lg hover:bg-white/10"
                       onClick={(e) => {
@@ -186,6 +187,15 @@ export default function Hero() {
                         <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
                       </span>
                     </button>
+                    <a 
+                      href="/careers"
+                      className="text-white/90 hover:text-white font-medium transition-all duration-300 text-sm uppercase tracking-wide cursor-pointer relative group px-3 py-2 rounded-lg hover:bg-white/10"
+                    >
+                      <span className="relative">
+                        CAREERS
+                        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                      </span>
+                    </a>
                     <button 
                       className="text-white/90 hover:text-white font-medium transition-all duration-300 text-sm uppercase tracking-wide cursor-pointer relative group bg-transparent border-none px-3 py-2 rounded-lg hover:bg-white/10"
                       onClick={(e) => {
@@ -326,6 +336,13 @@ export default function Hero() {
                     >
                       NEWS
                     </button>
+                    <a 
+                      href="/careers"
+                      onClick={() => setShowMobileMenu(false)}
+                      className="block w-full text-left py-4 px-4 text-white/90 hover:text-white transition-colors duration-200 rounded-lg hover:bg-white/10 border border-white/10 hover:border-white/20"
+                    >
+                      CAREERS
+                    </a>
                     
                     <button 
                       onClick={() => {

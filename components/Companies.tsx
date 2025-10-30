@@ -44,14 +44,14 @@ export default function Companies() {
     },
     {
       name: 'ONIX PLUS',
-      description: 'Professional contracting company delivering construction and project management excellence.',
+      description: 'CONSTRUCTION | FIT-OUT | LANDSCAPING — Onix Plus turns design and engineering into reality. We bring concepts to life through construction, fit-out, and landscaping with uncompromising quality and attention to detail.',
       services: [
-        'General Contracting',
-        'Construction Management',
-        'Project Coordination',
-        'Site Supervision',
-        'Cost Management',
-        'Timeline Control'
+        'Construction',
+        'Interior Fit-Out',
+        'Landscaping',
+        'Quality Assurance',
+        'Project Delivery',
+        'Site Coordination'
       ],
       icon: '',
       color: 'from-green-600 to-green-800'

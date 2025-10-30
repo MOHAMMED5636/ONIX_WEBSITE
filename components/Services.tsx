@@ -37,31 +37,31 @@ export default function Services() {
   }
   const services = [
     {
-      title: 'Engineering Solutions',
-      description: 'Comprehensive engineering services across structural, civil, and MEP disciplines.',
+      title: 'Engineering Services',
+      description: 'Comprehensive engineering across structural, civil, and MEP disciplines.',
       icon: '🏗️',
       features: ['Structural Design', 'Infrastructure Development', 'MEP Systems', 'Quality Assurance'],
       href: '/services/structural-engineering'
     },
     {
-      title: 'Technology Services',
-      description: 'Digital transformation and technology solutions for modern business challenges.',
-      icon: '💻',
-      features: ['Software Development', 'Digital Solutions', 'IT Consulting', 'System Integration'],
-      href: '/services/mep-engineering'
+      title: 'Design Services',
+      description: 'Creative architectural and interior design solutions tailored to your vision.',
+      icon: '🎨',
+      features: ['Interior Design', 'Exterior Design', 'Architectural Design', '3D Visualization'],
+      href: '/services/structural-engineering'
     },
     {
-      title: 'Construction Management',
-      description: 'End-to-end construction project management ensuring timely delivery and quality standards.',
-      icon: '🏢',
-      features: ['Project Planning', 'Quality Control', 'Cost Management', 'Timeline Coordination'],
+      title: 'Steel Contracting',
+      description: 'Specialized steel fabrication and contracting for construction and industry.',
+      icon: '🛠️',
+      features: ['Steel Fabrication', 'Metal Containers', 'Industrial Storage', 'Project Delivery'],
       href: '/services/project-management'
     },
     {
-      title: 'Consulting Services',
-      description: 'Strategic business consulting across multiple industries and sectors.',
-      icon: '📊',
-      features: ['Business Strategy', 'Process Optimization', 'Market Analysis', 'Growth Planning'],
+      title: 'Tax Consultation',
+      description: 'Professional tax advisory and compliance services for individuals and businesses.',
+      icon: '💼',
+      features: ['Tax Consultancy', 'Financial Planning', 'Accounting Services', 'Compliance Management'],
       href: '/services/consultation'
     }
   ]

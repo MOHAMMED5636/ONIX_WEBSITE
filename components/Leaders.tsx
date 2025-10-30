@@ -19,53 +19,60 @@ export default function Leaders() {
   const leaders = [
     {
       name: 'Rameez Kaddour',
-      title: 'Chief Executive Officer',
-      description: 'A visionary leader with over 25 years of experience in engineering and construction, Rameez has been instrumental in shaping Onix Group into a powerhouse of innovation and excellence.',
+      title: 'Founder',
+      description:
+        'Founder of ONIX, specialized in Architecture and Civil Engineering with 15+ years of hands-on experience delivering high-impact projects.',
       image: '/images/rameez-kaddour.png',
       slug: 'rameez-kaddour',
       achievements: [
-        'Led company growth from startup to industry leader',
-        'Pioneered sustainable construction practices',
-        'Established international partnerships'
-      ]
+        '15+ years across architecture and civil engineering',
+        'Delivered multi-disciplinary projects from concept to completion',
+        'Built a culture focused on quality, innovation, and client success',
+      ],
     },
     {
       name: 'Ahmed Al Kaddour',
-      title: 'Chief Operating Officer',
-      description: 'With a strategic mindset and exceptional operational expertise, Ahmed has driven the company\'s growth across multiple sectors, ensuring excellence in every project undertaken.',
+      title: 'Managing Director',
+      description:
+        "Civil Engineer with 25+ years of experience in Dubai. Ahmed leads ONIX Group with a delivery-first mindset, combining technical depth and proven leadership to drive growth across engineering and construction.",
       image: '/images/ahmed al kaddour.png',
       slug: 'ahmed-al-kaddour',
       achievements: [
-        'Optimized operational efficiency by 40%',
-        'Managed over 200 successful projects',
-        'Developed innovative project management systems'
-      ]
+        '25+ years delivering civil engineering projects in Dubai',
+        'Led multidisciplinary teams across major developments',
+        'Built long-term client relationships through quality and trust',
+      ],
     },
     {
       name: 'Kaddour Al Kaddour',
-      title: 'Founding Chairman',
-      description: 'The visionary founder who laid the foundation of Onix Group, Kaddour\'s entrepreneurial spirit and unwavering commitment to quality have been the cornerstone of our success story.',
+      title: 'Head of Design Department',
+      description:
+        'Architect with 10+ years of experience leading design across residential and commercial projects, driving concept-to-detail excellence at ONIX.',
       image: '/images/kaddour.png',
       slug: 'kaddour-al-kaddour',
       achievements: [
-        'Founded Onix Group in 1995',
-        'Established company values and culture',
-        'Mentored next generation of leaders'
-      ]
+        '10+ years in architectural design leadership',
+        'Delivered award‑winning residential and commercial concepts',
+        'Championed high standards in detailing and client experience',
+      ],
     },
     {
       name: 'Nabil Al Kaddour',
-      title: 'Chief Financial Officer',
-      description: 'A financial strategist par excellence, Nabil has steered the company through dynamic market conditions with prudent fiscal management and forward-thinking investment strategies.',
+      title: 'Head of ONIX PLUS',
+      description:
+        'Leads ONIX PLUS (Construction, Fit‑Out, and Landscaping). Focused on turning design and engineering strategies into reality with precision, quality, and on‑time delivery within budget.',
       image: '/images/nabil.png',
       slug: 'nabil-al-kaddour',
       achievements: [
-        'Maintained financial stability through market cycles',
-        'Secured major funding for expansion',
-        'Implemented advanced financial systems'
-      ]
-    }
+        'Delivered multi‑scope construction, fit‑out, and landscape projects',
+        'Built execution frameworks for quality and cost control',
+        'Consistently achieved on‑time, on‑budget outcomes',
+      ],
+    },
   ]
+
+  // Static leaders data used without CMS
+
 
   if (isLoading) {
     return (
